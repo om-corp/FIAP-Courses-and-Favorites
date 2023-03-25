@@ -1,0 +1,21 @@
+ /* Estilo da pagina  */
+body {
+    margin: 2%;
+    background-color:#FDFDFD;
+    color: #2e2e2e;
+}
+
+p { width: 630px; }
+        
+/* Design da Logotipo */
+.logo {
+    width: 150px;
+    float: right;
+}
+
+.subtitle { font-size: 130%; }
+        
+/* Decorando os links e palavras em negrito com a cor da FIAP */
+nav a, main p strong { color:#ED145B;}
+
+nav ul li {display: inline;}
