@@ -9,27 +9,44 @@
     <title>FIAP CURSOS - ADM</title>
     <style>
         body {
+            background-color: black;
+            text-decoration: none;
+            color: white;   
+        }
+        main, nav, h1{
             width: 560px;
-            background-color:#FDFDFD;
+            /* background-color:#FDFDFD; */
             margin: 20px;
         }
 
-        main img {
-            height: 43px;
+        img {
+            margin: 20px;
+            width: 75%;
+        }
+
+        #logo {
             width: 150px;
-            margin: 20px;
+            float: right;
         }
 
-        nav a {
+        nav a, main p strong {
             color:#ED145B;
         }
+
     </style>
 </head>
 <body>
     <header>
+        <a
+        href="link.html"
+        onMouseover="document.imagem.src= '/cp1/img/logo_dark.png' "
+        onMouseout="document.imagem.src= '/cp1/img/fiap-logo.jpg' " >
+        <img id="logo" src="/cp1/img/fiap-logo.jpg" name="imagem">
+        </a>
         <h1>Adminstração</h1>
     </header>
     <main>
+        <img src="/cp1/img/admin.png">
         <h2>O Curso</h2>
         <p><strong>A FIAP tem o melhor curso de Administração de São Paulo</strong>, primeiro colocado no ENADE. Isso é consequência de um
             ambiente de excelência em tecnologia, inovação e empreendedorismo, que desperta nos alunos o pensamento crítico,
