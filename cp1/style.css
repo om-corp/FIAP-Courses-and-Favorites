@@ -21,10 +21,9 @@ p { width: 630px; }
 /* Decorando os links e palavras em negrito com a cor da FIAP */
 nav a, main p strong { color:#ED145B;}
 
-nav ul li {display: inline;}
-
 .sites_fav {
     height:120px;
     border-radius: 20px;
+    border: 2px solid black;
     margin:20px;
 }
