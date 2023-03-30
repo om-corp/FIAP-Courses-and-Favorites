@@ -1,13 +1,11 @@
- /* Resetor */
- 
- /* Estilo da pagina  */
+
+/* Estilo da pagina */
 body{
     margin: 20px;
     width: 560px;
     background-color:#FDFDFD;
     color: #2e2e2e;
 }
-
 p { width: 630px; }
         
 /* Design da Logotipo */
@@ -21,9 +19,3 @@ p { width: 630px; }
 /* Decorando os links e palavras em negrito com a cor da FIAP */
 nav a, main p strong { color:#ED145B;}
 
-.sites_fav {
-    height:120px;
-    border-radius: 20px;
-    border: 2px solid black;
-    margin:20px;
-}
