@@ -3,12 +3,11 @@
  /* Estilo da pagina  */
 body{
     margin: 20px;
-    width: 560px;
     background-color:#FDFDFD;
     color: #2e2e2e;
 }
 
-p { width: 630px; }
+p { width: 50%; }
         
 /* Design da Logotipo */
 .logo {
