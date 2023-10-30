@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.cabecalho {
+    padding: 20px 8%;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    background-color: #000000
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-fiap { width: 140px; }
+
+.logo-omcorp {
+    color:#ffffff;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-links { padding: 28px 0; }
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    background: #992c50;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-links li a:hover::after { width: 100%; }
+
+.sites_fav {
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    margin-top: 110px;
+    padding-top: 0;
+}
+
+.sites_fav h1 {
+    background: #af1f4f;
+    padding: 20px 60px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sites_fav h2 {
+    background:#af1f4f;
+    padding:20px;
+    margin: 20px 30% ;
+    border-radius: 3px;
+}
+
+.sites_fav div a img {
+    height: 130px;
+    margin: 20px;
+}
+
+.sites_fav h1:hover {
+    transition: 0.5s;
+    color:#080008;
+}
