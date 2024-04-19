@@ -87,7 +87,7 @@ body {
     border-radius: 12px;
     background-color: #F3F3F3;
     box-shadow: 0 2px 5px #0000007a;
-    min-width: 256px;
+    width: 256px;
     flex-grow: 1;
 }
 
