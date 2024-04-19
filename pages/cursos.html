@@ -9,25 +9,28 @@
     <meta name="description" content="Primeiro Checkpoint de RWD, contendo um site que mostra cada curso da FIAP">
     <meta name="author" content="OM Corp.">
 
-    <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/style.css">
-    
+    <link rel="stylesheet" href="/Style/reset.css">
+    <link rel="stylesheet" href="/Style/style.css">
+
+    <script type="module" src="/Components/Card/index.js"></script>
+
+
     <title>Cursos - FIAP</title>
 </head>
 
 <body>
     <header class="cabecalho">
-        <img class="cabecalho__logo" src="/img/fiap.png" alt="FIAP">
+        <img class="cabecalho__logo" src="/Imgs/fiap.png" alt="FIAP">
         <nav>
             <ul class="cabecalho__links">
                 <li>
                     <a href="/index.html" class="cabecalho__link">Página Inicial</a>
                 </li>
                 <li>
-                    <a href="/pages/cursos.html" class="cabecalho__link cabecalho__link--pagina-atual">Cursos</a>
+                    <a href="/Pages/cursos.html" class="cabecalho__link cabecalho__link--pagina-atual">Cursos</a>
                 </li>
                 <li>
-                    <a href="/pages/fav.html" class="cabecalho__link">Favoritos</a>
+                    <a href="/Pages/fav.html" class="cabecalho__link">Favoritos</a>
                 </li>
                 <li>
                     <a href="/integrantes.txt" target=_blank class="cabecalho__link">Equipe</a>
@@ -36,5 +39,10 @@
         </nav>
     </header>
     
+    <main>
+        <section class="section--cards"></section>
+
+    </main>
+
 </body>
 </html>
