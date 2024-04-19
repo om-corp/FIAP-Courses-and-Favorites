@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="OM Corp.">
-    <meta name="description" content="Site que mostra e disponibiliza acesso aos sites favoritos de cada integrante do grupo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fav_style.css">
-    <title>FIAP - Sites fav.</title>
+
+    <meta name="description" content="Primeiro Checkpoint de RWD, contendo um site que mostra cada curso da FIAP">
+    <meta name="author" content="OM Corp.">
+
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+    
+    <title>Favoritos - FIAP</title>
 </head>
+
 <body>
-    <div class="cabecalho">
+    <header class="cabecalho">
+        <img class="cabecalho__logo" src="/img/fiap.png" alt="FIAP">
         <nav>
-            <img src="/img/logo_black.png" class="logo-fiap" alt="logotipo_fiap">
-            <h1 class="logo-omcorp">OM Corp. &copy;</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="/integrantes.txt" target=_blank>Members</a></li>
+            <ul class="cabecalho__links">
+                <li>
+                    <a href="/index.html" class="cabecalho__link">Página Inicial</a>
+                </li>
+                <li>
+                    <a href="/pages/cursos.html" class="cabecalho__link">Cursos</a>
+                </li>
+                <li>
+                    <a href="/pages/fav.html" class="cabecalho__link cabecalho__link--pagina-atual">Favoritos</a>
+                </li>
+                <li>
+                    <a href="/integrantes.txt" target=_blank class="cabecalho__link">Equipe</a>
+                </li>
             </ul>
         </nav>
-    </div>
-    <main class="sites_fav"> 
+    </header>
+
+    <!-- <main class="sites_fav"> 
         <h1 class="top_title">Nossos sites favoritos</h1> 
         <h2>Sites favoritos do André Sant'Ana</h2>
         <div>
@@ -51,6 +67,6 @@
             <a href="https://jp.mercari.com"><img src="/img/jp.mercari_logotipo.jpg" alt="jp.mercari"></a>
             <a href="https://www.balenciaga.com/en-en"><img src="/img/balenciaga_logotipo.png" alt="balenciaga"></a>
         </div>
-    </main>
+    </main> -->
 </body>
 </html>
