@@ -16,7 +16,7 @@ if (section) {
     .then(data => {
         data.map(
             materia => section.appendChild(
-                Card.createCard(
+                Card.create(
                     materia.tit, 
                     materia.desc, 
                     materia.url, 

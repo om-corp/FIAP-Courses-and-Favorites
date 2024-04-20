@@ -13,42 +13,65 @@ body {
     font-family: var(--primary-font, sans-serif);
 }
 
+.hero-banner,
+.cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5rem 3.125rem;
+}
+
+.cursos {
+    width: 80%;
+}
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 3.125rem;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .cabecalho__logo {
     height: 1.5rem;
 }
 
-.cabecalho__links {
+.cabecalho__nav {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.cabecalho__link {
+.cursos__title {
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
-.cabecalho__link--pagina-atual  {
+.cursos > * {
+    line-height: 1.25em;
+}
+
+.link,
+strong {
+    font-weight: 700;
+    transition: color 0.2s ease-in-out;
+}
+
+.link:hover,
+strong:hover,
+.link--pagina-atual  {
     color: var(--tertiary-color, #000);
 }
 
 .hero-banner {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
     background-color: var(--secondary-color,  #000);
     background-image: url(/img/fiap-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    padding: 5rem 3.125rem;
+
     color: var(--primary-color, #FFF);
 }
 
@@ -132,4 +155,15 @@ body {
 
 .card__button:hover {
     background: var(--tertiary-color, --secondary-color, #000);
+}
+
+.cursos__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.cursos__nav {
+    display: flex;
+    gap: 1.125rem;
 }

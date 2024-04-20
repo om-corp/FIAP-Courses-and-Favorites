@@ -12,7 +12,7 @@ export default class Card {
     constructor() {
     }
 
-    static createCard(_title, _text, _url, _image) {
+    static create(_title, _text, _url, _image) {
         const card = document.createElement('div');
         card.className = _className.card;
 
