@@ -1,7 +1,7 @@
 import Curso from "./curso.js";
 
 function obterDadosDoJSON() {
-    return fetch('/Components/Curso/cursos.json')
+    return fetch('../Components/Curso/cursos.json')
         .then(response => {
             if (!response.ok) throw new Error('Erro ao carregar o arquivo JSON');
             return response.json();

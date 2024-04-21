@@ -1,7 +1,7 @@
 import Card from './card.js';
 
 function obterDadosDoJSON() {
-    return fetch('/Components/Card/card.json')
+    return fetch('../Components/Card/card.json')
         .then(response => {
             if (!response.ok) throw new Error('Erro ao carregar o arquivo JSON');
             return response.json();
