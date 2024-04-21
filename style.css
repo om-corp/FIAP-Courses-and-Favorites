@@ -99,6 +99,7 @@ strong:hover,
     flex-wrap: wrap;
     gap: 50px 20px;
     padding: 5rem 3.125rem;
+    justify-content: center;
 }
 
 .card {
@@ -111,7 +112,6 @@ strong:hover,
     background-color: #F3F3F3;
     box-shadow: 0 2px 5px #0000007a;
     width: 256px;
-    flex-grow: 1;
 }
 
 .card:hover > .card__image {

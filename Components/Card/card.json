@@ -2,108 +2,99 @@
     {
         "tit": "ADMINSTRAÇÃO",
         "desc": "Domine as habilidades essenciais de gestão e liderança para impulsionar o sucesso em diversos setores empresariais.",
-        "url": "/Pages/Cursos/adm.html",
+        "url": "./cursos/adm.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "ANÁLISE E DESENVOLVIMENTO DE SISTEMAS",
         "desc": "Aprenda a projetar, desenvolver e implementar soluções de software inovadoras para atender às demandas do mercado digital em constante evolução.",
-        "url": "/Pages/Cursos/ads.html",
+        "url": "./cursos/ads.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "BANCO DE DADOS",
         "desc": "Torne-se especialista na gestão eficiente e segura de grandes volumes de dados, preparando-se para atuar em projetos de bancos de dados complexos.",
-        "url": "/Pages/Cursos/banco-de-dados.html",
+        "url": "./cursos/banco-de-dados.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "ENGENHARIA DA COMPUTAÇÃO",
         "desc": "Explore o mundo da tecnologia de hardware e software, desenvolvendo habilidades para criar sistemas computacionais avançados e inovadores.",
-        "url": "/Pages/Cursos/engenharia-da-computacao.html",
+        "url": "./cursos/engenharia-da-computacao.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "ENGENHARIA DA MECATRÔNICA",
         "desc": "Integre conhecimentos de engenharia mecânica, eletrônica e de controle para projetar e construir sistemas automatizados e robóticos.",
-        "url": "/Pages/cursos/engenharia-da-mecatronica.html",
+        "url": "./cursos/engenharia-da-mecatronica.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "ENGENHARIA DA PRODUÇÃO",
         "desc": "Adquira expertise em otimização de processos, gestão de recursos e logística para aumentar a eficiência e a qualidade na produção industrial.",
-        "url": "/Pages/cursos/engenharia-da-producao.html",
+        "url": "./cursos/engenharia-da-producao.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "GESTÃO DE TECNOLOGIA DA INFORMAÇÃO",
         "desc": "Desenvolva competências para gerir recursos tecnológicos de forma estratégica, alinhando a TI aos objetivos de negócio da organização.",
-        "url": "/Pages/cursos/gestao-de-tecnologia-da-informacao.html",
+        "url": "./cursos/gestao-de-tecnologia-da-informacao.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "JOGOS DIGITAIS",
         "desc": "Entre no universo criativo dos jogos digitais, aprendendo a projetar, desenvolver e publicar jogos envolventes para diversas plataformas.",
-        "url": "/Pages/cursos/jogos-digitais.html",
+        "url": "./cursos/jogos-digitais.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "REDE DE COMPUTADORES",
         "desc": "Aprofunde-se na arquitetura, configuração e segurança de redes de computadores, preparando-se para atuar na administração e manutenção de infraestruturas de rede.",
-        "url": "/Pages/cursos/rede-de-computadores.html",
+        "url": "./cursos/rede-de-computadores.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "SISTEMAS DA INFORMAÇÃO",
         "desc": "Desenvolva habilidades para analisar, projetar e implementar sistemas de informação eficientes, integrando tecnologia e processos de negócio.",
-        "url": "/Pages/cursos/sistemas-da-informacao.html",
+        "url": "./cursos/sistemas-da-informacao.html",
         "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     },
     {
         "tit": "SISTEMAS PARA INTERNET",
         "desc": "Explore as tecnologias web mais recentes, aprendendo a desenvolver aplicações web dinâmicas e interativas para atender às demandas do mercado online.",
-        "url": "/Pages/cursos/sistemas-para-internet.html",
+        "url": "./cursos/sistemas-para-internet.html",
         "img": {
-            "src": "/Imgs/fiap.png",
-            "alt": "FIAP"
-        }
-    },
-    {
-        "tit": "UM NOVO CARD",
-        "desc": "Explore as tecnologias web mais recentes, aprendendo a desenvolver aplicações web dinâmicas e interativas para atender às demandas do mercado online.",
-        "url": "/Pages/cursos/sistemas-para-internet.html",
-        "img": {
-            "src": "/Imgs/fiap.png",
+            "src": "./imgs/fiap.png",
             "alt": "FIAP"
         }
     }
