@@ -1,7 +1,7 @@
 import Curso from "./curso.js";
 
-function obterDadosDoJSON() {
-    return fetch('/Components/base/cursos.json')
+function obterDadosDoJSON(path) {
+    return fetch(path)
         .then(response => {
             if (!response.ok) throw new Error('Erro ao carregar o arquivo JSON');
             return response.json();
@@ -23,7 +23,7 @@ const sections = [
     document.getElementById('curso-sistNet')
 ];
 
-obterDadosDoJSON()
+obterDadosDoJSON('/Components/base/cursos.json')
     .then(data => {
 
         sections.map((sect, i) => {

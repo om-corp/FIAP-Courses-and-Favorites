@@ -12,7 +12,7 @@ export default class Card {
     constructor() {
     }
 
-    static create(_title, _text, _url, _image) {
+    static create(_title, _text, _url, _image, _target) {
         const card = document.createElement('div');
         card.className = _className.card;
 
@@ -21,7 +21,7 @@ export default class Card {
         }
 
         this.addText(card, _title, _text)
-        this.addBtn(card, 'Acessar', _url);
+        this.addBtn(card, 'Acessar', _url, _target);
 
         return card;
     }
@@ -56,12 +56,13 @@ export default class Card {
         return null;
     }
 
-    static addBtn(card, _text, _anchor) {
+    static addBtn(card, _text, _anchor, _target) {
         const button = document.createElement('a');
         button.className = _className.button;
         button.innerHTML = _text;
 
         _anchor ? button.href = _anchor : button.href = '#';
+        _target ? button.target = _target : button.target = '_top';
 
         card.appendChild(button);
 

@@ -1,0 +1,18 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3.125rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cabecalho__logo {
+    height: 1.5rem;
+}
+
+.cabecalho__nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
