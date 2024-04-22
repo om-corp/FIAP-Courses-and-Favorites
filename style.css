@@ -111,10 +111,12 @@ strong:hover,
     border-radius: 12px;
     background-color: #F3F3F3;
     box-shadow: 0 2px 5px #0000007a;
+    opacity: .6;
     width: 256px;
+    transition: opacity .2s ease-in;
 }
 
-.card:hover > .card__image {
+.card:hover {
     opacity: 1;
 }
 
@@ -123,8 +125,6 @@ strong:hover,
     border-radius: 12px;
     object-fit: contain;
     padding: 2rem;
-    opacity: .8;
-    transition: .2s ease-in-out;
 }
 
 .card__text {
