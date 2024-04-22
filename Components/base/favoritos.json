@@ -1,0 +1,17 @@
+[
+    {
+        "integrante": "André Sant'Ana",
+        "sites": [
+            { 
+                "href": "https://openai.com/blog/chatgpt", 
+                "imgSrc": "/img/chatgpt.jpg", 
+                "imgAlt": "ChatGPT"
+            }, 
+            { 
+                "href": "https://www.bing.com/?cc=br", 
+                "imgSrc": "/img/bing.jpg", 
+                "imgAlt": "Microsoft Bing"
+            }
+        ]
+    }
+]

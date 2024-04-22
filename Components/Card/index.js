@@ -1,7 +1,7 @@
 import Card from './card.js';
 
-function obterDadosDoJSON() {
-    return fetch('../Components/Card/card.json')
+function obterDadosDoJSON(path) {
+    return fetch(path)
         .then(response => {
             if (!response.ok) throw new Error('Erro ao carregar o arquivo JSON');
             return response.json();
@@ -12,12 +12,12 @@ function obterDadosDoJSON() {
 const section = document.body.querySelector('.section--cards');
 
 if (section) {
-    obterDadosDoJSON()
+    obterDadosDoJSON('/Components/base/cursos.json')
     .then(data => {
         data.map(
             materia => section.appendChild(
                 Card.create(
-                    materia.tit, 
+                    materia.title, 
                     materia.desc, 
                     materia.url, 
                     materia.img

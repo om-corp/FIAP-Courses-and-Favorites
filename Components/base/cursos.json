@@ -1,6 +1,7 @@
 [
     {
         "title": "Adminstração",
+        "desc": "Domine as habilidades essenciais de gestão e liderança para impulsionar o sucesso em diversos setores empresariais.",
         "text": [
             "A FIAP tem o <strong>melhor curso de Administração de São Paulo</strong>, primeiro colocado no ENADE. Isso é consequência de um ambiente de excelência em tecnologia, inovação e empreendedorismo, que desperta nos alunos <strong>o pensamento crítico</strong>, <strong>engajamento social</strong> e <strong>os prepara para o mercado de trabalho.</strong>",
             "O curso aborda tanto o lado gerencial quanto o lado estratégico de negócios, em disciplinas como: <strong>negociação</strong>, <strong>liderança</strong> e <strong>trabalho em equipe</strong>, <strong>direito empresarial</strong>, <strong>gestão financeira</strong>, <strong>gestão de pessoas</strong>, <strong>marketing</strong>, <strong>processos</strong> e <strong>gestão de TI.</strong>",
@@ -9,10 +10,16 @@
         "nav": {
             "prev": "",
             "next": "./ads.html"
+        },
+        "url": "./cursos/adm.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Análise e Desenvolvimento de Sistemas",
+        "desc": "Aprenda a projetar, desenvolver e implementar soluções de software inovadoras para atender às demandas do mercado digital em constante evolução.",
         "text": [
             "Você vai aprender a identificar as necessidades estruturais de um sistema, documentar, criar protótipos e desenvolver para web e mobile utilizando os principais softwares, ferramentas e metodologias do mercado, além de ser capaz de gerenciar projetos e controlar a qualidade de programas.",
             "O curso aborda tanto o lado gerencial quanto o lado estratégico de negócios, em disciplinas como: negociação, liderança e trabalho em equipe, direito empresarial, gestão financeira, gestão de pessoas, marketing, processos e gestão de TI.",   
@@ -21,10 +28,16 @@
         "nav": {
             "prev": "./adm.html",
             "next": "./banco-de-dados.html"
+        },
+        "url": "./cursos/ads.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Banco de Dados",
+        "desc": "Torne-se especialista na gestão eficiente e segura de grandes volumes de dados, preparando-se para atuar em projetos de bancos de dados complexos.",
         "text": [
             "Tecnologia em Banco de Dados prepara você para entender e utilizar melhor os dados, criando soluções inovadoras a partir de um fluxo de conteúdo monitorado e analisado.",
             "E personalizando os serviços prestados por meio da construção de bases de dados para tomada de decisão e aplicação dos conceitos de BI (Business Intelligence) relacionados à modelagem de indicadores de desempenho, integração de dados corporativos e visualização das informações.",
@@ -34,10 +47,16 @@
         "nav": {
             "prev": "./ads.html",
             "next": "./engenharia-da-computacao.html"
+        },
+        "url": "./cursos/banco-de-dados.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Engenharia da Computação",
+        "desc": "Explore o mundo da tecnologia de hardware e software, desenvolvendo habilidades para criar sistemas computacionais avançados e inovadores.",
         "text": [
             "O ENGENHEIRO DA COMPUTAÇÃO desenvolve projetos nas áreas de sistemas operacionais, arquitetura de computadores, redes, robótica e inteligência artificial.",
             "A grade privilegia conhecimentos avançados na área de exatas (física e matemática) e aspectos de eletrônica, controle e automação, telecomunicações e TI.",
@@ -47,10 +66,16 @@
         "nav": {
             "prev": "./banco-de-dados.html",
             "next": "./engenharia-da-mecatronica.html"
+        },
+        "url": "./cursos/engenharia-da-computacao.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Engenharia da Mecatrônica",
+        "desc": "Integre conhecimentos de engenharia mecânica, eletrônica e de controle para projetar e construir sistemas automatizados e robóticos.",
         "text": [
             "É uma das profissões mais promissoras do mercado, tanto em época de crise como em momentos positivos da economia.", 
             "Para ganhar competitividade, toda empresa precisa desenvolver e implantar sistemas automatizados, utilizando tecnologias exponenciais.",
@@ -61,10 +86,16 @@
         "nav": {
             "prev": "./engenharia-da-computacao.html",
             "next": "./engenharia-da-producao.html"
+        },
+        "url": "./cursos/engenharia-da-mecatronica.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Engenharia da Produção",
+        "desc": "Adquira expertise em otimização de processos, gestão de recursos e logística para aumentar a eficiência e a qualidade na produção industrial.",
         "text": [
             "<strong>O ENGENHEIRO DE PRODUÇÃO</strong> reúne conhecimentos das áreas de administração, economia e engenharia. O curso foi planejado para incorporar a influência de ferramentas tecnológic indispensáveis para gestão de negócios.",
             "A grade privilegia conhecimentos avançados na área de exatas (matemáti ciência e tecnologia) e à formação em aspectos políticos, sociais, ambientais, culturais e de sustentabilidade.",
@@ -73,10 +104,16 @@
         "nav": {
             "prev": "./engenharia-da-mecatronica.html",
             "next": "./gestao-de-tecnologia-da-informacao.html"
+        },
+        "url": "./cursos/engenharia-da-producao.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Gestão de Tecnologia da Informação",
+        "desc": "Desenvolva competências para gerir recursos tecnológicos de forma estratégica, alinhando a TI aos objetivos de negócio da organização.",
         "text": [
             "Você vai planejar e gerenciar sistemas computacionais (hardware) e de informação (software) nas áreas de processos, mobilidade, segurança, tecnologias emergentes, sistemas integrados, big data, cloud computing, engenharia de software, marketing digital e redes sociais.",
             "O curso traz uma abordagem equilibrada entre o conhecimento técnico e de gestão, unindo conhecimento base de plataformas de desenvolvimento com metodologias de projetos.",
@@ -85,10 +122,16 @@
         "nav": {
             "prev": "./engenharia-da-producao.html",
             "next": "./jogos-digitais.html"
+        },
+        "url": "./cursos/gestao-de-tecnologia-da-informacao.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Jogos Digitais",
+        "desc": "Entre no universo criativo dos jogos digitais, aprendendo a projetar, desenvolver e publicar jogos envolventes para diversas plataformas.",
         "text": [
             "Você vai ser preparado para desenvolver jogos em todas as plataformas: internet, consoles (Playstation, Xbox e Nintendo), smartphones (aplicativos para celulares e tablets), desktops (PC e Mac), TV digital, simuladores de realidade virtual e virtualizações (totem tour virtual).",
             "Você vai aprender a idealizar e desenvolver um jogo desde o enredo, passando pela criação de personagens, conceitos de gameficação, ambientes e objetos de cenários.",
@@ -99,10 +142,16 @@
         "nav": {
             "prev": "./gestao-de-tecnologia-da-informacao.html",
             "next": "./rede-de-computadores.html"
+        },
+        "url": "./cursos/jogos-digitais.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Rede de Computadores",
+        "desc": "Aprofunde-se na arquitetura, configuração e segurança de redes de computadores, preparando-se para atuar na administração e manutenção de infraestruturas de rede.",
         "text": [
             "É ministrado em um ambiente que simula uma empresa real, com computadores (SO Linux e Windows), roteadores, switches, cabeamento e demais equipamentos, trazendo a vivência que você precisa para ser competitivo no mercado de trabalho.", 
             "Você vai aprender a dimensionar o uso de equipamentos multiusuários. Configurar acesso e disponibilidade para internet e intranet, roteadores e provedores. Trabalhar com sistemas de gerenciamento de redes, sistemas operacionais e simulação de ambiente de Cloud Computing. E com os novos conhecimentos sobre hardware, software e modos de funcionamento, também vai ser capaz de otimizar o desempenho dos computadores, adequando a estrutura física ao seu potencial de produção, o que aumenta o desempenho. Tudo isso de acordo com as regras de segurança."
@@ -110,10 +159,16 @@
         "nav": {
             "prev": "./jogos-digitais.html",
             "next": "./sistemas-da-informacao.html"
+        },
+        "url": "./cursos/rede-de-computadores.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Sistemas da Informação",
+        "desc": "Desenvolva habilidades para analisar, projetar e implementar sistemas de informação eficientes, integrando tecnologia e processos de negócio.",
         "text": [
             "<strong>O BACHAREL EM SISTEMAS DE INFORMAÇÃO</strong> recebe uma visão ampla das organizações e seus modelos de negócio e de como a tecnologia pode amplificar sua estratégia.", 
             "Com conteúdo que vai de hardware a inteligência artificial, passando por gestão empresarial, o curso abrange conhecimentos de desenvolvimento de aplicativos (mobile, games e web), engenharia de software e governança de TI, banco de dados, redes, business intelligence, análise de sistemas orientados a objetos, gestão de SI, gerência de projetos e segurança da informação.", 
@@ -124,10 +179,16 @@
         "nav": {
             "prev": "./rede-de-computadores.html",
             "next": "./sistemas-para-internet.html"
+        },
+        "url": "./cursos/sistemas-da-informacao.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     },
     {
         "title": "Sistemas para Internet",
+        "desc": "Explore as tecnologias web mais recentes, aprendendo a desenvolver aplicações web dinâmicas e interativas para atender às demandas do mercado online.",
         "text": [
             "Tecnologia em Sistemas para Internet prepara você para criar experiências omnichannel e desenvolver plataformas tecnológicas que apoiem o processo de transformação digital do mercado.", 
             "Este é um curso que possibilita a imersão completa em todo o ecossistema digital: desde a criação, manutenção, segurança e gerenciamento de sites, portais e aplicativos mobile até o desenvolvimento de projetos de Marketing Digital e CyberSecurity.", 
@@ -136,6 +197,11 @@
         "nav": {
             "prev": "./sistemas-da-informacao.html",
             "next": ""
+        },
+        "url": "./cursos/sistemas-para-internet.html",
+        "img": {
+            "src": "./img/fiap.png",
+            "alt": "FIAP"
         }
     }
 
