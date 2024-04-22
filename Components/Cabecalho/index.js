@@ -71,11 +71,16 @@ class Cabecalho {
     }
     
     newImg(className, src, alt) {
+        const anchorTag = document.createElement('a');
+        anchorTag.href = Cabecalho.links[0].href;
+
         const imgTag = document.createElement('img');
         imgTag.className = className;
         imgTag.src = src;
         imgTag.alt = alt;
-        return imgTag
+
+        anchorTag.appendChild(imgTag);
+        return anchorTag
     }
     
     newItem(className, {href, text}, {isSpecial, specialClassName}) {
