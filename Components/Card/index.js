@@ -29,6 +29,7 @@ if (cursosSection) {
     .catch(error => console.error("ERRO: " + error));
 }
 
+//TODO: COMPREENDER ERRO DE CARREGAMENTO
 const favoritesSection = document.body.querySelector('.card-section--favorites');
 if (favoritesSection) {
     obterDadosDoJSON('/Components/base/favoritos.json')

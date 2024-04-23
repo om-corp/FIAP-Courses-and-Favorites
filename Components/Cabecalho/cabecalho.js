@@ -1,14 +1,19 @@
+import Anchor from "../Main/anchor.js";
+import Container from "../Main/container.js";
+import Image from "../Main/image.js";
 
+//TODO: CORRIGIR CABEÇALHO
 export default class Cabecalho {
-    classNames = {
-        'header': 'cabecalho',
-        'img': 'cabecalho__logo',
-        'ul': 'cabecalho__nav',
-        'a': 'link',
-        'currentPage': 'link--pagina-atual'
+
+    styles = {
+        "HEADER": "cabecalho",
+        "IMAGE": "cabecalho__logo",
+        "UNORDERED_LIST": "cabecalho__nav",
+        "ANCHOR": "link",
+        "CURRENT_PAGE": "lnk--paginia-atual"
     };
 
-    static links = [
+    links = [
         { 'href': '/index.html', 'text': 'Página Inicial' },
         { 'href': '/cursos.html', 'text': 'Cursos' },
         { 'href': '/fav.html', 'text': 'Favoritos' },
@@ -17,7 +22,6 @@ export default class Cabecalho {
 
     constructor(id, {imgSrc, imgAlt}, page) {
         const header = document.getElementById(id);
-        console.log(page);
 
         try {
             
@@ -39,64 +43,43 @@ export default class Cabecalho {
             header.appendChild(img);
             header.appendChild(nav);
 
-            console.log(Cabecalho.links);
-
         } catch (error) {
             console.error(error);
         }
 
     }
     
-    newUnorderedList(className, items, currentPage, {itemClassName, specialItemClassName}) {
-        const uListTag = document.createElement('ul');
-        uListTag.className = className;
+    newUnorderedList( itemList ) {
+        return new Container.create(
+            'ul', this.styles.UNORDERED_LIST, 
+            ()=> {
+                itemList.map(item => {
+                const li = document.createElement('li');
     
-        items.map((item, i) => {
-            uListTag.appendChild( 
-                this.newItem(
-                    itemClassName, 
-                    { 
-                        href: item.href, 
-                        text: item.text 
-                    }, 
-                    { 
-                        isSpecial: (item.text || item.href) == currentPage, 
-                        specialClassName: specialItemClassName
-                    }
+                li.appendChild(
+                    new Anchor( 
+                        item.href, 
+                        item.text,
+                        [ 
+                            this.styles.ANCHOR, 
+                            isSpecial ? this.styles.CURRENT_PAGE : '' 
+                        ]
+                    )
                 )
-            )
-        })
+    
+                ul.appendChild(li);
+            })}
+        )
         
-        return uListTag;
+        return ul;
     }
     
-    newImg(className, src, alt) {
-        const anchorTag = document.createElement('a');
-        anchorTag.href = Cabecalho.links[0].href;
+    newImage(src, alt) {
+        return new Anchor(
+            Cabecalho.links[0].href, 
+            Anchor.target.TOP, 
+            new Image(src, alt, this.styles.IMAGE)
+        )
+    }
 
-        const imgTag = document.createElement('img');
-        imgTag.className = className;
-        imgTag.src = src;
-        imgTag.alt = alt;
-
-        anchorTag.appendChild(imgTag);
-        return anchorTag
-    }
-    
-    newItem(className, {href, text}, {isSpecial, specialClassName}) {
-    
-        const itemTag = document.createElement('li');
-        
-        const anchorTag = document.createElement('a');
-        anchorTag.classList.add( className );
-        
-        if ( isSpecial ) anchorTag.classList.add( specialClassName );
-    
-        anchorTag.href = href;
-        anchorTag.innerHTML = text;
-    
-        itemTag.appendChild(anchorTag);
-    
-        return itemTag;
-    }
 }

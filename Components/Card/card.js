@@ -1,67 +1,54 @@
-const _className = {
-    card: 'card',
-    image: 'card__image',
-    textContainer: 'card__text',
-    title: 'card__headline',
-    text: 'card__content',
-    button: 'card__button'
-};
+import Container from "../Main/container";
+import Text from "../Main/text";
 
 export default class Card {
 
-    constructor() {
-    }
+    styles = {
+        "CARD": "card",
+        "IMAGE": "card__image",
+        "TEXT_CONTAINER": "card__text",
+        "TITLE": "card__headline",
+        "TEXT": "card__content",
+        "BUTTON": "card__button"
+    };
 
-    static create(_title, _text, _url, _image, _target) {
+    constructor(title, text, url, image, target) {
         const card = document.createElement('div');
-        card.className = _className.card;
 
-        if (_image) {
-            this.addImg(card, _image);
-        }
+        if (image) this.addImg(card, image);
 
-        this.addText(card, _title, _text)
-        this.addBtn(card, 'Acessar', _url, _target);
+        this.addText(card, title, text)
+        this.addBtn(card, "Acessar", url, target);
 
         return card;
     }
 
-    static addImg(card, _image) {
+    addImg(card, image) {
         const image = document.createElement('img');
-        image.src = _image.src;
-        image.alt = _image.alt;
-        image.className = _className.image;
+        image.src = image.src;
+        image.alt = image.alt;
+        image.className = this.style.IMAGE;
 
         card.appendChild(image);
 
         return null;
     }
 
-    static addText(card, _title, _text) {
-        const container = document.createElement('div');
-        container.className = _className.textContainer;
-
-        const title = document.createElement('h3');
-        title.className = _className.title;
-        title.innerHTML = _title;
-
-        const text = document.createElement('p');
-        text.className = _className.text;
-        text.innerHTML = _text;
-
-        container.append(title, text);
-
-        card.appendChild(container);
-
-        return null;
+    addText(card, title, text) {
+        return card.appendChild(
+            Container.create( 'div', this.styles.TEXT_CONTAINER,  [
+                Text('h3', this.styles.TITLE, title),
+                Text('p', this.styles.TEXT, text)
+            ])
+        );
     }
 
-    static addBtn(card, _text, _anchor, _target) {
+    addBtn(card, text, anchor, target) {
         const button = document.createElement('a');
         button.className = _className.button;
         button.innerHTML = _text;
 
-        _anchor ? button.href = _anchor : button.href = '#';
+        _anchor ? button.href = _anchor : button.href = "#";
         _target ? button.target = _target : button.target = '_top';
 
         card.appendChild(button);

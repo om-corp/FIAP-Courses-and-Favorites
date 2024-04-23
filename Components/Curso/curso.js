@@ -1,70 +1,50 @@
-const _className = {
-    title: 'cursos__title',
-    textContainer: 'cursos__text-container',
-    text: 'cursos__text',
-    nav: 'cursos__nav',
-    link: 'link'
-};
+import Container from "../Main/container.js";
+import Text from "../Main/text.js";
+import Anchor from "../Main/anchor.js";
+
 
 export default class Curso {
 
-    static create(_title, _text, _nav) {
-        const curso = document.querySelector('.cursos');
+    static styles = {
+        "TITLE": "cursos__title",
+        "TEXT_CONTAINER": "cursos__text-container",
+        "TEXT": "cursos__text",
+        "NAV": "cursos__nav",
+        "LINK": "link"
+    };
 
-        this.addTitle(curso, _title);
-        this.addText(curso, _text);
-        this.addNav(curso, _nav);
-
-        return curso;
+    static create(title="TITULO", text="TEXTO", nav={}) {
+        const curso = Container.create('div', '');
+        Container.add(curso, [
+            Curso.addTitle(curso, title),
+            Curso.addText(curso, text),
+            Curso.addNav(curso, nav)
+        ])
     }
 
-    static addTitle(curso, _title) {
-        const title = document.createElement('h2');
-        title.className = _className.title;
-        title.innerHTML = _title;
 
-        curso.appendChild(title);
-        return null;
+
+    static addTitle(curso, textDATA) {
+        return curso.appendChild(
+            new Text('h2', Curso.styles.TITLE, textDATA)
+        );
     }
 
-    static addText(curso, _container) {
-        const container = document.createElement('div');
-        container.className = _className.textContainer;
-
-        _container.map(_text => {
-
-            const text = document.createElement('p');
-            text.innerHTML = _text;
-            container.appendChild(text);
-
-        })
-
-        curso.appendChild(container);
-        return null;
+    static addText(curso, textDATA) {
+        return curso.appendChild(
+            new Container.create( 'div', Curso.styles.TEXT_CONTAINER, [
+                textDATA.map(text => new Text( 'p', thCursois.styles.TEXT, text ))
+            ])
+        );
     }
 
-    static addNav(curso, _nav) {
-        const container = document.createElement('nav');
-        container.className = _className.nav;
-
-        if (_nav.prev) {
-            const prev = document.createElement('a');
-            prev.className = _className.link;
-            prev.href = _nav.prev;
-            prev.innerHTML = "Curso Anterior";
-            container.appendChild(prev)
-        }
-
-        if (_nav.next) {
-            const next = document.createElement('a');
-            next.className = _className.link;
-            next.href = _nav.next;
-            next.innerHTML = "Próximo Curso";
-            container.appendChild(next)
-        }
-
-        curso.appendChild(container);
-        return null;
+    static addNav(curso, nav, target = Anchor.target.TOP) {
+        return curso.appendChild(
+            new Container.create( 'nav', Curso.styles.NAV, [
+                nav.prev ? new Anchor( Curso.styles.LINK, nav.prev, target, "Curso Anterior" ) : "",
+                nav.next ? new Anchor( Curso.styles.LINK, nav.next, target, "Próximo Curso" ) : ""
+            ])
+        );
     }
 
 }

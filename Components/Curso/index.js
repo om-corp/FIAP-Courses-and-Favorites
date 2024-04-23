@@ -1,3 +1,4 @@
+import Text from "../Main/text.js";
 import Curso from "./curso.js";
 
 function obterDadosDoJSON(path) {
@@ -9,36 +10,35 @@ function obterDadosDoJSON(path) {
         .catch(error => console.error('Erro:', error));
 }
 
-const sections = [
-    document.getElementById('curso-adm'),
-    document.getElementById('curso-ads'),
-    document.getElementById('curso-bd'),
-    document.getElementById('curso-engComp'),
-    document.getElementById('curso-engMec'),
-    document.getElementById('curso-engProd'),
-    document.getElementById('curso-gestTecInf'),
-    document.getElementById('curso-jogos'),
-    document.getElementById('curso-redeComp'),
-    document.getElementById('curso-sistInf'),
-    document.getElementById('curso-sistNet')
-];
+const ID = {
+    "ADM": "curso-adm",
+    "ADS": "curso-ads",
+    "BD": "curso-bd",
+    "ENG_COMP": "curso-engComp",
+    "ENG_MEC": "curso-engMec",
+    "ENG_PROD": "curso-engProd",
+    "GEST_TEC_INF": "curso-gestTecInf",
+    "JOGOS": "curso-jogos",
+    "REDE_COMP": "curso-redeComp",
+    "SIST_INF": "curso-sistInf",
+    "SIST_NET": "curso-sistNet"
+};
 
+//TODO: COMPREENDER ERRO DE CARREGAMENTO
 obterDadosDoJSON('/Components/base/cursos.json')
     .then(data => {
 
-        sections.map((sect, i) => {
-            if (sect) {
-                sect.appendChild(
-                    Curso.create(
-                        data[i].title,
-                        data[i].text,
-                        data[i].nav
-                    )
-                )
+        let i = 0;
 
-            }
-        })
+        for (const id in ID) {
+
+            const pagina = document.getElementById(ID[id]);
+            console.log(pagina);
+
+            pagina.innerHTML = new Curso("", "", {"prev": "", "next": ""})
+
+            i++;
+        }
 
     })
-    .catch(error => console.error("ERRO: " + error));
 
