@@ -10,8 +10,6 @@
     --tertiary-color: #ED145B;
 
     --primary-font: Arial, Helvetica, sans-serif;
-    /*TODO: adcionar fonte secundaria */
-    --secondary-font: var(--primary-color), sans-serif;
 }
 
 body {
@@ -26,6 +24,6 @@ body {
 }
 
 .link:hover,
-.link--pagina-atual  {
+#link--pagina-atual  {
     color: var(--tertiary-color);
 }
