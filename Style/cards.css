@@ -53,17 +53,10 @@
     background: var(--tertiary-color, --secondary-color);
 }
 
-.card-section--cursos {
+.card-section {
     display: flex;
     flex-wrap: wrap;
     gap: 50px 20px;
     padding: 5rem 3.125rem;
     justify-content: center;
-}
-
-.card-section--favorites {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px 20px;
-    padding: 5rem 3.125rem;
 }

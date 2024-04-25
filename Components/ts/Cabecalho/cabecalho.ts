@@ -1,5 +1,10 @@
 import { Container, Anchor, Image } from "../components.js";
-import { devLog } from "../developer-mode.js";
+
+const devMode = false;
+
+export function devLog(element: any) {
+    if (devMode) console.log(element);
+};
 
 export class Cabecalho {
 

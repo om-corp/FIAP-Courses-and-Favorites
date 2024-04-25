@@ -1,8 +1,7 @@
-@import url('./Style/cabecalho.css');
-@import url('./Style/hero-banner.css');
-@import url('./Style/cards.css');
-@import url('./Style/cursos.css');
-
+@import url('./style/cabecalho.css');
+@import url('./style/hero-banner.css');
+@import url('./style/cards.css');
+@import url('./style/cursos.css');
 
 :root {
     --primary-color: #09090c;

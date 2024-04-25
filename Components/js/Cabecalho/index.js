@@ -1,5 +1,4 @@
-import { Cabecalho } from "../Cabecalho/cabecalho.js";
-import { devLog } from "../developer-mode.js";
+import { Cabecalho, devLog } from "../Cabecalho/cabecalho.js";
 const paginas = [
     {
         "url": "/index.html",
@@ -12,7 +11,7 @@ const paginas = [
         "cabecalho_id": "cabecalho--cursos"
     },
     {
-        "url": "/fav.html",
+        "url": "/favoritos.html",
         "nome": "Favoritos",
         "cabecalho_id": "cabecalho--favoritos"
     },

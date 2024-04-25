@@ -1,11 +1,14 @@
-import { devLog } from "./developer-mode.js";
+const devMode = false;
+
+export function devLog(element: any) {
+    if (devMode) console.log(element);
+};
 
 abstract class Component {
 
     create(_className?: string | undefined, _id?: string | undefined): HTMLElement | null {
         throw new Error("Method not implemented");
     }
-
 }
 
 export class Container {

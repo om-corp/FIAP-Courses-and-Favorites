@@ -1,4 +1,9 @@
-import { devLog } from "./developer-mode.js";
+const devMode = false;
+export function devLog(element) {
+    if (devMode)
+        console.log(element);
+}
+;
 class Component {
     create(_className, _id) {
         throw new Error("Method not implemented");
