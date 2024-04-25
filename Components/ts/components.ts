@@ -21,7 +21,6 @@ export class Container {
             if (_elements) {
                 _elements.map((element, i) => {
                     if(element) container.appendChild(element);
-                    else console.error(`Erro ao adcionar ${i}° elemento de ${_tag}`);
                     devLog(`\nCONTAINER elements:\nelement: ${element?.innerHTML}\n\n`)
                 })
             };

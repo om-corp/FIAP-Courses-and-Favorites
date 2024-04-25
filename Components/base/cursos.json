@@ -15,7 +15,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-adm"
     },
     {
         "title": "Análise e Desenvolvimento de Sistemas",
@@ -33,7 +34,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-ads"
     },
     {
         "title": "Banco de Dados",
@@ -52,7 +54,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-bd"
     },
     {
         "title": "Engenharia da Computação",
@@ -71,7 +74,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-engComp"
     },
     {
         "title": "Engenharia da Mecatrônica",
@@ -91,7 +95,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-engMec"
     },
     {
         "title": "Engenharia da Produção",
@@ -109,7 +114,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-engProd"
     },
     {
         "title": "Gestão de Tecnologia da Informação",
@@ -127,7 +133,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-gestTecInf"
     },
     {
         "title": "Jogos Digitais",
@@ -147,7 +154,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-jogos"
     },
     {
         "title": "Rede de Computadores",
@@ -164,7 +172,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-redeComp"
     },
     {
         "title": "Sistemas da Informação",
@@ -184,7 +193,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-sistInf"
     },
     {
         "title": "Sistemas para Internet",
@@ -202,7 +212,8 @@
         "img": {
             "src": "./img/fiap.png",
             "alt": "FIAP"
-        }
+        },
+        "idPage": "curso-sistNet"
     }
 
 ]

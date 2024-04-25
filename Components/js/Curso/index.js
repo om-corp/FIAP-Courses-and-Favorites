@@ -1,3 +1,4 @@
+import { Curso } from "./curso.js";
 const ID = {
     "ADM": "curso-adm",
     "ADS": "curso-ads",
@@ -11,5 +12,17 @@ const ID = {
     "SIST_INF": "curso-sistInf",
     "SIST_NET": "curso-sistNet"
 };
-console.log(ID["ADM"]);
-export {};
+fetch("../../../Components/base/cursos.json", { method: "GET" })
+    .then((_response) => _response.json())
+    .then((_data) => {
+    _data.map((curso) => {
+        // devLog(curso);
+        const section = document.getElementById(curso.idPage);
+        if (section) {
+            const element = new Curso().create(curso.title, curso.text, curso.nav);
+            if (element)
+                section.appendChild(element);
+        }
+    });
+})
+    .catch((error) => console.error(error));
