@@ -4,12 +4,12 @@
         "sites": [
             { 
                 "href": "https://openai.com/blog/chatgpt", 
-                "imgSrc": "/img/chatgpt.jpg", 
+                "imgSrc": "/img/chatgpt.png", 
                 "imgAlt": "ChatGPT"
             }, 
             { 
                 "href": "https://www.bing.com/?cc=br", 
-                "imgSrc": "/img/bing.jpg", 
+                "imgSrc": "/img/bing.png", 
                 "imgAlt": "Microsoft Bing"
             }
         ]
@@ -64,13 +64,13 @@
         "sites": [
             { 
                 "href": "https://jp.mercari.com", 
-                "imgSrc": "/img/mercari.jpg", 
+                "imgSrc": "/img/mercari.png", 
                 "imgAlt": "mercari"
             }, 
             { 
                 "href": "https://www.balenciaga.com/en-en", 
                 "imgSrc": "/img/balenciaga.png", 
-                "imgAlt": "BALENCIAGA"
+                "imgAlt": "Balenciaga"
             }
         ]
     }

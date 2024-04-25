@@ -4,9 +4,10 @@
 @import url('./style/cursos.css');
 
 :root {
-    --primary-color: #09090c;
-    --secondary-color: #e6e6e6;
+    --primary-color: #e6e6e6;
+    --secondary-color: #09090c;
     --tertiary-color: #ED145B;
+    --accent-color: #f3f3f3;
 
     --primary-font: Arial, Helvetica, sans-serif;
 }

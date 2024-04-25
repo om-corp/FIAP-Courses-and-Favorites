@@ -1,15 +1,18 @@
 .card {
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    gap: 24px;
     justify-content: space-between;
+    padding: 24px;
+    padding-bottom: 50px;
+    gap: 50px;
     border-radius: 12px;
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 5px var(--secondary-color);
+    background-color: var(--accent-color);
     opacity: .6;
     width: 256px;
     transition: opacity .2s ease-in;
+}
+.card > div {
+    width: 256px;
 }
 
 .card:hover {
@@ -17,7 +20,7 @@
 }
 
 .card__image {
-    aspect-ratio: 4/3;
+    aspect-ratio: 1;
     border-radius: 12px;
     object-fit: contain;
     padding: 2rem;
@@ -31,7 +34,7 @@
 
 .card__headline {
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .card__content {
@@ -43,7 +46,7 @@
     background: #3C3C43;
     color: #FFF;
     padding: 12px;
-    border-radius: 100px;
+    border-radius: 10px;
     align-self: baseline;
     font-size: 0.875rem;
     transition: .2s ease-in-out;

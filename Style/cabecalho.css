@@ -5,6 +5,7 @@
     padding: 1.25rem 3.125rem;
     gap: 2rem;
     flex-wrap: wrap;
+    background-color: var(--accent-color);
 }
 
 .cabecalho__logo {
