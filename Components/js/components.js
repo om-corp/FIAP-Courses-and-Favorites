@@ -83,7 +83,7 @@ export class Anchor {
     }
 }
 export class Image {
-    create(_src, _alt, _className, _id) {
+    create(_src, _alt, _className, _rounded, _id) {
         try {
             const image = document.createElement('img');
             image.src = _src;
@@ -93,6 +93,8 @@ export class Image {
                 image.className = _className;
             if (_id)
                 image.id = _id;
+            if (_rounded)
+                image.style.borderRadius = _rounded;
             devLog(`\nIMAGE params: \nsrc: ${_src}\nalt: ${_alt}\nclassName: ${_className}\nID: ${_id}\n\nIMAGE: ${image}\n\n`);
             return image;
         }

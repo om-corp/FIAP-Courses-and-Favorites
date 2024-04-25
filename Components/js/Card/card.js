@@ -28,7 +28,7 @@ class Card {
 export class SmallCard extends Card {
     create(_title, _desc, _button, _img) {
         return new Container().create("div", [
-            new Image().create(_img.src, _img.alt, styles.IMAGE),
+            new Image().create(_img.src, _img.alt, styles.IMAGE, _img === null || _img === void 0 ? void 0 : _img.rounded),
             new Container().create("div", [
                 new Text().create(_title, "h3", styles.TITLE),
                 new Text().create(_desc, "p", styles.TEXT)

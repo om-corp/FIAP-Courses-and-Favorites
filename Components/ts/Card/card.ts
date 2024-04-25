@@ -35,9 +35,9 @@ abstract class Card implements ICard {
 }
 
 export class SmallCard extends Card implements ICard {
-    create(_title: string | undefined, _desc: string | undefined, _button: { href: string; }, _img: { src: string; alt: string; }): HTMLElement | null {
+    create(_title: string | undefined, _desc: string | undefined, _button: { href: string; }, _img: { src: string; alt: string; rounded?: string; }): HTMLElement | null {
         return new Container().create("div", [
-            new Image().create(_img.src, _img.alt, styles.IMAGE),
+            new Image().create(_img.src, _img.alt, styles.IMAGE, _img?.rounded),
             new Container().create("div", [
                 new Text().create(_title, "h3", styles.TITLE),
                 new Text().create(_desc, "p", styles.TEXT)

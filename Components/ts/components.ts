@@ -84,13 +84,14 @@ export class Anchor {
 
 export class Image {
 
-    create(_src: string, _alt?: string,_className?: string | undefined, _id?: string | undefined): HTMLElement | null {
+    create(_src: string, _alt?: string, _className?: string, _rounded?: string, _id?: string): HTMLElement | null {
         try {
             const image = document.createElement('img');
             image.src = _src;
             if (_alt) image.alt = _alt;
             if (_className) image.className = _className;
             if (_id) image.id = _id;
+            if (_rounded) image.style.borderRadius = _rounded;
             devLog(`\nIMAGE params: \nsrc: ${_src}\nalt: ${_alt}\nclassName: ${_className}\nID: ${_id}\n\nIMAGE: ${image}\n\n`)
             return image;
             

@@ -17,7 +17,7 @@ const paginas = [
         "cabecalho_id": "cabecalho--favoritos"
     },
     {
-        "url": "/integrantes.txt",
+        "url": "/equipe.html",
         "nome": "Equipe",
         "cabecalho_id": "cabecalho--equipe"
     }
