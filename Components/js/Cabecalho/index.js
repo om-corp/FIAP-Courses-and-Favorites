@@ -25,8 +25,6 @@ const links = paginas.map(pagina => { return { href: pagina.url, content: pagina
 const image = { "src": "../../../img/fiap.png", "alt": "FIAP" };
 for (let i = 0; i < paginas.length; i++) {
     const header = document.getElementById(paginas[i].cabecalho_id);
-    console.log(`paginas[i].nome: ${paginas[i].nome}\nlinks: ${links[i].content}`);
     if (header)
         new Cabecalho().create(header, paginas[i].nome, links);
-    console.log((`HEADER: ${header === null || header === void 0 ? void 0 : header.innerHTML}`));
 }

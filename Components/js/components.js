@@ -13,9 +13,11 @@ export class AbstractComponent {
             console.log(element);
     }
     devLogComponent(_name, _function, _params) {
-        this.devLog(`${_name} ${_function} | params`);
-        for (const item in _params) {
-            this.devLog(`${item}: ${_params[item]}`);
+        if (this.devMode) {
+            this.devLog(`${_name} ${_function} | params`);
+            for (const item in _params) {
+                this.devLog(`${item}: ${_params[item]}`);
+            }
         }
     }
 }

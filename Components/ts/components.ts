@@ -44,9 +44,11 @@ export abstract class AbstractComponent {
     }
 
     protected devLogComponent(_name: string, _function: string, _params: any) {
-        this.devLog(`${_name} ${_function} | params`)
-        for (const item in _params) {
-            this.devLog(`${item}: ${_params[item]}`);
+        if (this.devMode) {
+            this.devLog(`${_name} ${_function} | params`)
+            for (const item in _params) {
+                this.devLog(`${item}: ${_params[item]}`);
+            }
         }
     }
 }
