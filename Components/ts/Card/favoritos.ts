@@ -1,4 +1,4 @@
-import { Card } from "../Card/card.js";
+import { Card } from "./card.js";
 
 const devMode = false;
 
