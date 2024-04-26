@@ -1,4 +1,4 @@
-import { Container, Anchor, Image, Text } from "../components.js";
+import { Container, Anchor, Image, Text, AbstractComponent } from "../components.js";
 
 const devMode = true;
 
@@ -6,7 +6,7 @@ export function devLog(element: any) {
     if (devMode) console.log(element);
 };
 
-export class Curso {
+export class Curso extends AbstractComponent {
 
     private styles = {
         "CURSO": "cursos",
@@ -18,23 +18,18 @@ export class Curso {
 
     create(_title: string="default title", _text: string[]=["default text"], _nav: {"prev": string, "next": string}): HTMLElement | null {
         try {
-            const curso = new Container().create("div", [], this.styles.CURSO);
+            const curso = new Container().create({ tag: "div", elements: [
+                new Text().create({ content: _title, tag: "h2", className: this.styles.TITLE }),
+                new Container().create({ tag: "div", elements: _text.map(text => 
+                    new Text().create({ content: text, tag: "p" })
+                ), className: this.styles.TEXT_CONTAINER }),
+                new Container().create({ tag: "nav", elements: [
+                    _nav.prev ? new Anchor().create({ href: _nav.prev, content: "Curso Anterior", className: this.styles.LINK }) : null,
+                    _nav.next ? new Anchor().create({ href: _nav.next, content: "Próximo Curso", className: this.styles.LINK }) : null
+                ], className: this.styles.NAV })
+            ], className: this.styles.CURSO })
 
-            const title = new Text().create( _title, "h2", this.styles.TITLE );
-            const textContainer = new Container().create("div", 
-                _text.map(text => new Text().create(text)), 
-            this.styles.TEXT_CONTAINER);
-
-            const nav = new Container().create("nav", [
-                _nav.prev ? new Anchor().create(_nav.prev, "Curso Anterior", "_self", this.styles.LINK): null,
-                _nav.next ? new Anchor().create(_nav.next, "Próximo Curso", "_self", this.styles.LINK): null
-            ], this.styles.NAV)
-
-            if (curso && title && textContainer && nav) {
-                curso.appendChild(title);
-                curso.appendChild(textContainer);
-                curso.appendChild(nav);
-            }
+            this.devLogComponent("CURSO", "create", curso?.innerHTML )
 
             return curso;
             

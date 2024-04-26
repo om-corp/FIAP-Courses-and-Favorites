@@ -1,12 +1,13 @@
-import { Container, Anchor, Text } from "../components.js";
+import { Container, Anchor, Text, AbstractComponent } from "../components.js";
 const devMode = true;
 export function devLog(element) {
     if (devMode)
         console.log(element);
 }
 ;
-export class Curso {
+export class Curso extends AbstractComponent {
     constructor() {
+        super(...arguments);
         this.styles = {
             "CURSO": "cursos",
             "TITLE": "cursos__title",
@@ -17,18 +18,15 @@ export class Curso {
     }
     create(_title = "default title", _text = ["default text"], _nav) {
         try {
-            const curso = new Container().create("div", [], this.styles.CURSO);
-            const title = new Text().create(_title, "h2", this.styles.TITLE);
-            const textContainer = new Container().create("div", _text.map(text => new Text().create(text)), this.styles.TEXT_CONTAINER);
-            const nav = new Container().create("nav", [
-                _nav.prev ? new Anchor().create(_nav.prev, "Curso Anterior", "_self", this.styles.LINK) : null,
-                _nav.next ? new Anchor().create(_nav.next, "Próximo Curso", "_self", this.styles.LINK) : null
-            ], this.styles.NAV);
-            if (curso && title && textContainer && nav) {
-                curso.appendChild(title);
-                curso.appendChild(textContainer);
-                curso.appendChild(nav);
-            }
+            const curso = new Container().create({ tag: "div", elements: [
+                    new Text().create({ content: _title, tag: "h2", className: this.styles.TITLE }),
+                    new Container().create({ tag: "div", elements: _text.map(text => new Text().create({ content: text, tag: "p" })), className: this.styles.TEXT_CONTAINER }),
+                    new Container().create({ tag: "nav", elements: [
+                            _nav.prev ? new Anchor().create({ href: _nav.prev, content: "Curso Anterior", className: this.styles.LINK }) : null,
+                            _nav.next ? new Anchor().create({ href: _nav.next, content: "Próximo Curso", className: this.styles.LINK }) : null
+                        ], className: this.styles.NAV })
+                ], className: this.styles.CURSO });
+            this.devLogComponent("CURSO", "create", curso === null || curso === void 0 ? void 0 : curso.innerHTML);
             return curso;
         }
         catch (error) {
