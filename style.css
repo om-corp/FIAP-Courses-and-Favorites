@@ -24,6 +24,6 @@ body {
 }
 
 .link:hover,
-#link--pagina-atual  {
+.link--pagina-atual  {
     color: var(--tertiary-color);
 }

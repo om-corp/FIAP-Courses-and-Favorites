@@ -1,30 +1,76 @@
-const devMode = false;
 
-export function devLog(element: any) {
-    if (devMode) console.log(element);
-};
+export interface ISelector {
+    className?: string;
+    id?: string;
+}
 
-abstract class Component {
+export interface ISpecialClass {
+    isSpecial: boolean;
+    specialClass: string;
+}
 
-    create(_className?: string | undefined, _id?: string | undefined): HTMLElement | null {
-        throw new Error("Method not implemented");
+export interface IContainer extends ISelector {
+    tag: string;
+    elements?: (HTMLElement | null)[];
+}
+
+export interface IAnchor extends ISelector {
+    href: string;
+    content: string;
+    target: string;
+}
+
+export interface IImage extends ISelector {
+    src: string;
+    alt?: string;
+}
+
+export interface IText extends ISelector {
+    content: string;
+    tag: string;
+}
+
+export abstract class AbstractComponent {
+
+    protected addSelector(_component: HTMLElement, _className?: string, _id?: string) {
+        if (_className) _component.classList.add(_className);
+        if (_id) _component.id = _id;
+    }
+
+    protected devMode = false;
+
+    protected devLog(element: any) {
+        if (this.devMode) console.log(element);
+    }
+
+    protected devLogComponent(_name: string, _function: string, _params: any) {
+        this.devLog(`${_name} ${_function} | params`)
+        for (const item in _params) {
+            this.devLog(`${item}: ${_params[item]}`);
+        }
     }
 }
 
-export class Container {
+export class Container extends AbstractComponent {
 
-    create(_tag: string="div", _elements?: (HTMLElement | null)[], _className?: string | undefined, _id?: string | undefined): HTMLElement | null {
+    protected devMode: boolean = false;
+
+    create(_container: IContainer={tag: "div", elements: []}): HTMLElement | null {
         try {
-            const container = document.createElement(_tag);
-            if (_className) container.className = _className;
-            if (_id) container.id = _id;
-            if (_elements) {
-                _elements.map((element, i) => {
-                    if(element) container.appendChild(element);
-                    devLog(`\nCONTAINER elements:\nelement: ${element?.innerHTML}\n\n`)
+            const container = document.createElement(_container.tag);
+
+            this.addSelector(container, _container.className, _container.id );
+
+            if (_container.elements) {
+                _container.elements.map((element, i) => {
+                    if(element) {
+                        container.appendChild(element);
+                        this.devLogComponent( "CONTAINER", "elements", [element.innerHTML]);
+                    }
                 })
             };
-            devLog(`\nCONTAINER create | params:\ntag: ${_tag}\nelements: ${_elements}\nclassName: ${_className}\nID: ${_id}\n\nCONTAINER: ${container}\n\n`)
+            
+            this.devLogComponent( "CONTAINER", "create", _container);
             return container;
 
         } catch (e) {
@@ -33,46 +79,26 @@ export class Container {
         }
     }
 
-    add(_container: HTMLElement, _element: HTMLElement): HTMLElement | null {
-        try {
-            devLog(`CONTAINER add: before: ${_container}: ${_element}`)
-            _container.appendChild(_element);
-            devLog(`CONTAINER add: after: ${_container}`)
-            return _container;
-
-        } catch (error) {
-            console.error(error);
-            return null;
-        }
-    }
-
-    addAll(_container: HTMLElement, _elements: (HTMLElement |  null)[]) {
-        try {
-            _elements.map((element, i) => {
-                if(element) _container.appendChild(element);
-                else console.error(`Erro ao adcionar ${i}° elemento de ${element}`);
-                devLog(`CONTAINER addAll: ${_container}: ${element}`);
-            })
-            return _container;
-            
-        } catch (error) {
-            console.error(error);
-            return null;
-        }
-    }
 }
 
-export class Anchor {
+export class Anchor extends AbstractComponent {
 
-    create(_href: string="#", _content: string="default anchor", _target: string="_self", _className?: string | undefined, _id?: string | undefined, _isSpecial?: boolean | undefined): HTMLElement | null {
+    protected devMode: boolean = false;
+
+    create(_anchor: IAnchor={ href: "#", content: "default anchor", target: "_self" }, _special?: ISpecialClass): HTMLElement | null {
         try {
             const anchor = document.createElement("a");
-            anchor.href = _href;
-            anchor.innerHTML = _content;
-            anchor.target = _target;
-            if (_className) anchor.className = _className;
-            if (_id && _isSpecial) anchor.id = _id;
-            devLog(`\nANCHOR params: \nhref: ${_href}\ncontent: ${_content}\ntarget: ${_target}\nclassName: ${_className}\nID: ${_id}\n\nANCHOR: ${anchor}\n\n`)
+            anchor.href = _anchor.href;
+            anchor.innerHTML = _anchor.content;
+            anchor.target = _anchor.target;
+            this.addSelector(anchor, _anchor.className, _anchor.id );
+            if (_special) {
+                this.devLog(`ìsSpecial: ${_special.isSpecial}`)
+                if (_special.isSpecial) anchor.classList.add(_special.specialClass);
+                this.devLog(`anchor with special class: ${anchor.innerHTML}`)
+            }
+            
+            this.devLogComponent("ANCHOR", "create", _anchor);
             return anchor;
 
         } catch (error) {
@@ -82,17 +108,20 @@ export class Anchor {
     }
 }
 
-export class Image {
+export class Image extends AbstractComponent {
 
-    create(_src: string, _alt?: string, _className?: string, _rounded?: string, _id?: string): HTMLElement | null {
+    protected devMode: boolean = false;
+
+    create(_image: IImage, _rounded?: string): HTMLElement | null {
         try {
             const image = document.createElement('img');
-            image.src = _src;
-            if (_alt) image.alt = _alt;
-            if (_className) image.className = _className;
-            if (_id) image.id = _id;
+            image.src = _image.src;
+            if (_image.alt) image.alt = _image.alt;
             if (_rounded) image.style.borderRadius = _rounded;
-            devLog(`\nIMAGE params: \nsrc: ${_src}\nalt: ${_alt}\nclassName: ${_className}\nID: ${_id}\n\nIMAGE: ${image}\n\n`)
+
+            this.addSelector(image, _image.className, _image.id );
+            this.devLogComponent("IMAGE", "create", _image);
+            
             return image;
             
         } catch (error) {
@@ -102,15 +131,18 @@ export class Image {
     }
 }
 
-export class Text {
+export class Text extends AbstractComponent {
 
-    create(_content: string="default text", _tag: string="p", _className?: string | undefined, _id?: string | undefined): HTMLElement | null {
+    protected devMode: boolean = false;
+
+    create(_text: IText={ content: "default text", tag: "p" }): HTMLElement | null {
         try {
-            const text = document.createElement(_tag);
-            text.innerHTML = _content;
-            if (_className) text.className = _className;
-            if (_id) text.id = _id;
-            devLog(`\nTEXT params: \ncontent: ${_content}\ntag: ${_tag}\nclassName: ${_className}\nID: ${_id}\n\nTEXT: ${text}\n\n`)
+            const text = document.createElement(_text.tag);
+            text.innerHTML = _text.content;
+
+            this.addSelector(text, _text.className, _text.id );
+            this.devLogComponent("TEXT", "create", _text);
+
             return text;
 
         } catch (error) {
