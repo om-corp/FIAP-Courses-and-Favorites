@@ -1,4 +1,4 @@
-import { SmallCard } from "../Card/card.js";
+import { Card } from "../Card/card.js";
 
 const devMode = false;
 
@@ -14,7 +14,7 @@ fetch("../../../Components/base/favoritos.json", {method: "GET"})
         if (cardSection) {
             _data.map((data: any, di: number) => {
                 data.sites.map((site: any, si: number) => {
-                    const card = new SmallCard().create(site.imgAlt, data.integrante, {"href": site.href}, {"src": site.imgSrc, "alt": site.imgAlt})
+                    const card = new Card().create(site.imgAlt, data.integrante, { href: site.href, content: "VISITAR PÁGINA" }, { src: site.imgSrc, alt: site.imgAlt })
                     if (card) cardSection.appendChild( card );
                 })
             })

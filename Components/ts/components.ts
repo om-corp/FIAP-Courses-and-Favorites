@@ -17,12 +17,13 @@ export interface IContainer extends ISelector {
 export interface IAnchor extends ISelector {
     href: string;
     content: string;
-    target: string;
+    target?: string;
 }
 
 export interface IImage extends ISelector {
     src: string;
     alt?: string;
+    rounded?: string;
 }
 
 export interface IText extends ISelector {
@@ -92,7 +93,7 @@ export class Anchor extends AbstractComponent {
             const anchor = document.createElement("a");
             anchor.href = _anchor.href;
             anchor.innerHTML = _anchor.content;
-            anchor.target = _anchor.target;
+            _anchor.target ? anchor.target = _anchor.target : "_self";
             this.addSelector(anchor, _anchor.className, _anchor.id );
             if (_special) {
                 this.devLog(`ìsSpecial: ${_special.isSpecial}`)
@@ -114,12 +115,12 @@ export class Image extends AbstractComponent {
 
     protected devMode: boolean = false;
 
-    create(_image: IImage, _rounded?: string): HTMLElement | null {
+    create(_image: IImage={src: "", alt: "", rounded: "0"}): HTMLElement | null {
         try {
             const image = document.createElement('img');
             image.src = _image.src;
             if (_image.alt) image.alt = _image.alt;
-            if (_rounded) image.style.borderRadius = _rounded;
+            if (_image.rounded) image.style.borderRadius = _image.rounded;
 
             this.addSelector(image, _image.className, _image.id );
             this.devLogComponent("IMAGE", "create", _image);

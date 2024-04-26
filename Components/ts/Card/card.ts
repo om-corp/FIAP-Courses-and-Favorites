@@ -1,10 +1,4 @@
-import { Container, Anchor, Image, Text } from "../components.js";
-
-const devMode = false;
-
-export function devLog(element: any) {
-    if (devMode) console.log(element);
-};
+import { Container, Anchor, Image, Text, AbstractComponent, IAnchor, IImage } from "../components.js";
 
 const styles = {
     "CARD": "card",
@@ -17,51 +11,29 @@ const styles = {
 }
 
 interface ICard {
-    create(_title: string, _desc: string, _button: { href: string }, _img: { src: string, alt: string }): HTMLElement | null;
+    create(_title: string, _desc: string, _button: IAnchor, _img: IImage): HTMLElement | null;
 }
 
-abstract class Card implements ICard {
-
-    create(_title: string="default title", _desc: string="default description", _button: {href: string}, _img: {src: string, alt: string}): HTMLElement | null {
+export class Card extends AbstractComponent implements ICard {
+    create(_title: string="default title", _desc: string="default description", _button: IAnchor={ href: "#", content: "default button", target: "_self" }, _img: IImage): HTMLElement | null {
         try {
-            return null;
+            const card = new Container().create({ tag: "div", elements: [
+                new Image().create({ src: _img.src, alt: _img.alt, className: styles.IMAGE, rounded: _img.rounded}),
+                new Container().create({ tag: "div", elements: [
+                    new Text().create({ content: _title, tag: "h3", className: styles.TITLE }),
+                    new Text().create({ content: _desc, tag: "p", className: styles.TEXT })
+                ], className: styles.TEXT_CONTAINER }),
+                new Container().create({ tag: "footer", elements: [
+                    new Anchor().create({ href: _button.href, content: _button.content, className: styles.BUTTON })
+                ], className: styles.FOOTER})
+            ], className: styles.CARD })
+
+            this.devLogComponent("CARD", "create", card);
+            return card;
             
         } catch (error) {
             console.error(error);
             return null;
         }
-    }
-
-}
-
-export class SmallCard extends Card implements ICard {
-    create(_title: string | undefined, _desc: string | undefined, _button: { href: string; }, _img: { src: string; alt: string; rounded?: string; }): HTMLElement | null {
-        return new Container().create("div", [
-            new Image().create(_img.src, _img.alt, styles.IMAGE, _img?.rounded),
-            new Container().create("div", [
-                new Text().create(_title, "h3", styles.TITLE),
-                new Text().create(_desc, "p", styles.TEXT)
-            ], styles.TEXT_CONTAINER),
-            new Container().create("footer", [
-                new Anchor().create(_button.href, "ACESSAR", "_self", styles.BUTTON)
-            ], styles.FOOTER)
-
-        ], styles.CARD);
-    }
-}
-
-export class BigCard extends Card implements ICard {
-    create(_title: string | undefined, _desc: string | undefined, _button: { href: string; }, _img: { src: string; alt: string; }): HTMLElement | null {
-        return new Container().create("div", [
-            new Container().create("div", [
-                new Image().create(_img.src, _img.alt, styles.IMAGE),
-                new Text().create(_title, "h3", styles.TITLE),
-                new Text().create(_desc, "p", styles.TEXT)
-            ], styles.TEXT_CONTAINER),
-            new Container().create("footer", [
-                new Anchor().create(_button.href, "ACESSAR", "_self", styles.BUTTON)
-            ], styles.FOOTER)
-
-        ], styles.CARD);
     }
 }

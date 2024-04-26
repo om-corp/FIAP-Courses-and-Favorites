@@ -22,7 +22,7 @@ export class Cabecalho extends AbstractComponent {
                 const nav = new Container().create({ tag: "nav", elements: [
                     new Container().create({ tag: "ul", elements: _links.map((link) => {
                         return new Container().create({ tag: "li", elements: [
-                            new Anchor().create({ href: link.href, content: link.content, target: link.target, className: styles.A}, { isSpecial: link.content == _currentPage, specialClass: "link--pagina-atual"})
+                            new Anchor().create({ href: link.href, content: link.content, className: styles.A}, { isSpecial: link.content == _currentPage, specialClass: "link--pagina-atual"})
                         ]})
                     }), className: styles.UL})
                 ]});

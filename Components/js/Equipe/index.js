@@ -1,4 +1,4 @@
-import { SmallCard } from "../Card/card.js";
+import { Card } from "../Card/card.js";
 const devMode = false;
 export function devLog(element) {
     if (devMode)
@@ -11,7 +11,7 @@ fetch("../../../Components/base/integrantes.json", { method: "GET" })
     const cardSection = document.querySelector(".card-section--equipe");
     if (cardSection) {
         _data.map((data, di) => {
-            const card = new SmallCard().create(data.nome, `RM ${data.rm}`, { "href": data.github }, { "src": data.avatar, "alt": `Avatar de ${data.nome}`, "rounded": "100%" });
+            const card = new Card().create(data.nome, `RM ${data.rm}`, { href: data.github, content: "VISITAR GITHUB" }, { src: data.avatar, alt: `Avatar de ${data.nome}`, rounded: "100%" });
             if (card)
                 cardSection.appendChild(card);
         });

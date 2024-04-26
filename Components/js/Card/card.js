@@ -1,10 +1,4 @@
-import { Container, Anchor, Image, Text } from "../components.js";
-const devMode = false;
-export function devLog(element) {
-    if (devMode)
-        console.log(element);
-}
-;
+import { Container, Anchor, Image, Text, AbstractComponent } from "../components.js";
 const styles = {
     "CARD": "card",
     "IMAGE": "card__image",
@@ -14,42 +8,25 @@ const styles = {
     "FOOTER": "card__footer",
     "BUTTON": "card__button"
 };
-class Card {
-    create(_title = "default title", _desc = "default description", _button, _img) {
+export class Card extends AbstractComponent {
+    create(_title = "default title", _desc = "default description", _button = { href: "#", content: "default button", target: "_self" }, _img) {
         try {
-            return null;
+            const card = new Container().create({ tag: "div", elements: [
+                    new Image().create({ src: _img.src, alt: _img.alt, className: styles.IMAGE, rounded: _img.rounded }),
+                    new Container().create({ tag: "div", elements: [
+                            new Text().create({ content: _title, tag: "h3", className: styles.TITLE }),
+                            new Text().create({ content: _desc, tag: "p", className: styles.TEXT })
+                        ], className: styles.TEXT_CONTAINER }),
+                    new Container().create({ tag: "footer", elements: [
+                            new Anchor().create({ href: _button.href, content: _button.content, className: styles.BUTTON })
+                        ], className: styles.FOOTER })
+                ], className: styles.CARD });
+            this.devLogComponent("CARD", "create", card);
+            return card;
         }
         catch (error) {
             console.error(error);
             return null;
         }
-    }
-}
-export class SmallCard extends Card {
-    create(_title, _desc, _button, _img) {
-        return new Container().create("div", [
-            new Image().create(_img.src, _img.alt, styles.IMAGE, _img === null || _img === void 0 ? void 0 : _img.rounded),
-            new Container().create("div", [
-                new Text().create(_title, "h3", styles.TITLE),
-                new Text().create(_desc, "p", styles.TEXT)
-            ], styles.TEXT_CONTAINER),
-            new Container().create("footer", [
-                new Anchor().create(_button.href, "ACESSAR", "_self", styles.BUTTON)
-            ], styles.FOOTER)
-        ], styles.CARD);
-    }
-}
-export class BigCard extends Card {
-    create(_title, _desc, _button, _img) {
-        return new Container().create("div", [
-            new Container().create("div", [
-                new Image().create(_img.src, _img.alt, styles.IMAGE),
-                new Text().create(_title, "h3", styles.TITLE),
-                new Text().create(_desc, "p", styles.TEXT)
-            ], styles.TEXT_CONTAINER),
-            new Container().create("footer", [
-                new Anchor().create(_button.href, "ACESSAR", "_self", styles.BUTTON)
-            ], styles.FOOTER)
-        ], styles.CARD);
     }
 }
