@@ -13,7 +13,7 @@
         },
         "url": "./cursos/adm.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-adm"
@@ -32,7 +32,7 @@
         },
         "url": "./cursos/ads.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-ads"
@@ -52,7 +52,7 @@
         },
         "url": "./cursos/banco-de-dados.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-bd"
@@ -72,7 +72,7 @@
         },
         "url": "./cursos/engenharia-da-computacao.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-engComp"
@@ -93,7 +93,7 @@
         },
         "url": "./cursos/engenharia-da-mecatronica.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-engMec"
@@ -112,7 +112,7 @@
         },
         "url": "./cursos/engenharia-da-producao.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-engProd"
@@ -131,7 +131,7 @@
         },
         "url": "./cursos/gestao-de-tecnologia-da-informacao.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-gestTecInf"
@@ -152,7 +152,7 @@
         },
         "url": "./cursos/jogos-digitais.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-jogos"
@@ -170,7 +170,7 @@
         },
         "url": "./cursos/rede-de-computadores.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-redeComp"
@@ -191,7 +191,7 @@
         },
         "url": "./cursos/sistemas-da-informacao.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-sistInf"
@@ -210,7 +210,7 @@
         },
         "url": "./cursos/sistemas-para-internet.html",
         "img": {
-            "src": "./img/fiap.png",
+            "src": "/img/fiap.png",
             "alt": "FIAP"
         },
         "idPage": "curso-sistNet"

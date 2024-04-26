@@ -6,23 +6,23 @@ const paginas = [
         "cabecalho_id": "cabecalho--principal"
     },
     {
-        "url": "/cursos.html",
+        "url": "/pages/cursos.html",
         "nome": "Cursos",
         "cabecalho_id": "cabecalho--cursos"
     },
     {
-        "url": "/favoritos.html",
+        "url": "/pages/favoritos.html",
         "nome": "Favoritos",
         "cabecalho_id": "cabecalho--favoritos"
     },
     {
-        "url": "/equipe.html",
+        "url": "/pages/equipe.html",
         "nome": "Equipe",
         "cabecalho_id": "cabecalho--equipe"
     }
 ];
 const links = paginas.map(pagina => { return { href: pagina.url, content: pagina.nome, target: "_self" }; });
-const image = { "src": "../../../img/fiap.png", "alt": "FIAP" };
+const image = { "src": "/img/fiap.png", "alt": "FIAP" };
 for (let i = 0; i < paginas.length; i++) {
     const header = document.getElementById(paginas[i].cabecalho_id);
     if (header)
