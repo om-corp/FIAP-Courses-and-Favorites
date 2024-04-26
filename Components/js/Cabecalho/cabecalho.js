@@ -1,36 +1,37 @@
-import { Container, Anchor, Image } from "../components.js";
-const devMode = false;
-export function devLog(element) {
-    if (devMode)
-        console.log(element);
-}
-;
-export class Cabecalho {
+import { Container, Anchor, Image, AbstractComponent } from "../components.js";
+const styles = {
+    "LOGO": "cabecalho__logo",
+    "UL": "cabecalho__nav",
+    "A": "link",
+    "CURRENT_PAGE": "link--pagina-atual"
+};
+export class Cabecalho extends AbstractComponent {
     constructor() {
-        this.styles = {
-            "IMAGE": "cabecalho__logo",
-            "UNORDERED_LIST": "cabecalho__nav",
-            "ANCHOR": "link",
-            "CURRENT_PAGE": "link--pagina-atual"
-        };
+        super(...arguments);
+        this.devMode = false;
     }
-    create(_header, _currentPage, _links, _img) {
+    create(_header, _currentPage, _links) {
         try {
             if (_header) {
-                devLog(`\nCABEÇALHO create | params:\nheader: ${_header.innerHTML}\ncurrentPage: ${_currentPage}\nlinks: ${_links}\nimg: ${_img}\n\n`);
-                devLog("LOGO:");
-                const logo = new Image().create(_img.src, _img.alt, this.styles.IMAGE);
-                devLog("NAV:");
-                const nav = new Container().create("nav", [
-                    new Container().create("ul", _links.map(link => new Container().create("li", [
-                        new Anchor().create(link.href, link.text, "_self", this.styles.ANCHOR, this.styles.CURRENT_PAGE, _currentPage == link.text)
-                    ])), this.styles.UNORDERED_LIST),
-                ]);
-                if (logo)
+                this.devLogComponent("CABEÇALHO", "create", { _header, _currentPage, _links });
+                const logo = new Image().create({ src: "/img/fiap.png", alt: "FIAP", className: styles.LOGO });
+                _links.map(link => this.devLog(link));
+                const nav = new Container().create({ tag: "nav", elements: [
+                        new Container().create({ tag: "ul", elements: _links.map((link) => {
+                                return new Container().create({ tag: "li", elements: [
+                                        new Anchor().create({ href: link.href, content: link.content, target: link.target, className: styles.A }, { isSpecial: link.content == _currentPage, specialClass: "link--pagina-atual" })
+                                    ] });
+                            }), className: styles.UL })
+                    ] });
+                if (logo) {
+                    this.devLog(`LOGO: ${logo.innerHTML}`);
                     _header.appendChild(logo);
-                if (nav)
+                }
+                if (nav) {
+                    this.devLog(`NAV: ${nav.innerHTML}`);
                     _header.appendChild(nav);
-                devLog(`\nCABEÇALHO: ${_header.innerHTML}\n\n`);
+                }
+                this.devLogComponent("CABEÇALHO", "create", { _header });
             }
             return _header;
         }

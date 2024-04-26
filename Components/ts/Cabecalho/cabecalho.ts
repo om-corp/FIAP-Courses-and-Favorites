@@ -1,41 +1,45 @@
-import { Container, Anchor, Image } from "../components.js";
+import { Container, Anchor, Image, IImage, IAnchor, AbstractComponent } from "../components.js";
 
-const devMode = false;
-
-export function devLog(element: any) {
-    if (devMode) console.log(element);
+const styles = {
+    "LOGO": "cabecalho__logo",
+    "UL": "cabecalho__nav",
+    "A": "link",
+    "CURRENT_PAGE": "link--pagina-atual"
 };
 
-export class Cabecalho {
+export class Cabecalho extends AbstractComponent {
 
-    private styles = {
-        "IMAGE": "cabecalho__logo",
-        "UNORDERED_LIST": "cabecalho__nav",
-        "ANCHOR": "link",
-        "CURRENT_PAGE": "link--pagina-atual"
-    };
+    protected devMode: boolean = false;
 
-    create(_header: HTMLElement, _currentPage: string, _links: {"href": string, "text": string}[], _img: {"src": string, "alt": string}): HTMLElement | null {
+    create(_header: HTMLElement, _currentPage: string, _links: IAnchor[]): HTMLElement | null {
         try {
             if (_header) {
-                devLog(`\nCABEÇALHO create | params:\nheader: ${_header.innerHTML}\ncurrentPage: ${_currentPage}\nlinks: ${_links}\nimg: ${_img}\n\n`);
-                devLog("LOGO:")
-                const logo = new Image().create(_img.src, _img.alt, this.styles.IMAGE);
-                devLog("NAV:")
-                const nav = new Container().create("nav", [
-                    new Container().create("ul", _links.map(link => 
-                        new Container().create("li", [
-                            new Anchor().create(link.href, link.text, "_self", this.styles.ANCHOR, this.styles.CURRENT_PAGE, _currentPage == link.text)
-                        ])
-                    ), this.styles.UNORDERED_LIST),
-                ]);
+                this.devLogComponent( "CABEÇALHO", "create", {_header, _currentPage, _links});
                 
-                if (logo) _header.appendChild(logo);
-                if (nav) _header.appendChild(nav);
+                const logo = new Image().create({ src: "/img/fiap.png", alt: "FIAP", className: styles.LOGO });
+                
+                _links.map(link => this.devLog(link))
+                const nav = new Container().create({ tag: "nav", elements: [
+                    new Container().create({ tag: "ul", elements: _links.map((link) => {
+                        return new Container().create({ tag: "li", elements: [
+                            new Anchor().create({ href: link.href, content: link.content, target: link.target, className: styles.A}, { isSpecial: link.content == _currentPage, specialClass: "link--pagina-atual"})
+                        ]})
+                    }), className: styles.UL})
+                ]});
+                
+                if (logo) {
+                    this.devLog(`LOGO: ${logo.innerHTML}`)
+                    _header.appendChild(logo);
+                }
 
-                devLog(`\nCABEÇALHO: ${_header.innerHTML}\n\n`);
+                if (nav) {
+                    this.devLog(`NAV: ${nav.innerHTML}`)
+                    _header.appendChild(nav);
+                }
 
+                this.devLogComponent( "CABEÇALHO", "create", {_header});
             }
+
             return _header;
             
         } catch (error) {

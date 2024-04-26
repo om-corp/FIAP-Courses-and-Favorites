@@ -1,4 +1,4 @@
-import { Cabecalho, devLog } from "../Cabecalho/cabecalho.js";
+import { Cabecalho } from "../Cabecalho/cabecalho.js";
 
 const paginas = [
     {
@@ -23,11 +23,12 @@ const paginas = [
     }
 ]
 
-const links = paginas.map(pagina => {return {"href": pagina.url, "text": pagina.nome}});
+const links = paginas.map(pagina => {return {href: pagina.url, content: pagina.nome, target: "_self"}});
 const image = {"src": "../../../img/fiap.png", "alt": "FIAP"};
 
 for (let i = 0; i < paginas.length; i++) {
     const header = document.getElementById(paginas[i].cabecalho_id);
-    if (header) new Cabecalho().create(header, paginas[i].nome, links, image);
-    devLog(`HEADER: ${header?.innerHTML}`)
+    console.log(`paginas[i].nome: ${paginas[i].nome}\nlinks: ${links[i].content}`);
+    if (header) new Cabecalho().create(header, paginas[i].nome, links);
+    console.log((`HEADER: ${header?.innerHTML}`));
 }
