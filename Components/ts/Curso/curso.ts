@@ -16,6 +16,8 @@ export class Curso extends AbstractComponent {
         "LINK": "link"
     };
 
+    protected devMode: boolean = true;
+
     create(_title: string="default title", _text: string[]=["default text"], _nav: {"prev": string, "next": string}): HTMLElement | null {
         try {
             const curso = new Container().create({ tag: "div", elements: [

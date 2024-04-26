@@ -15,6 +15,7 @@ export class Curso extends AbstractComponent {
             "NAV": "cursos__nav",
             "LINK": "link"
         };
+        this.devMode = true;
     }
     create(_title = "default title", _text = ["default text"], _nav) {
         try {

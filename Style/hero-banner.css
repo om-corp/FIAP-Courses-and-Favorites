@@ -1,16 +1,17 @@
 .hero-banner {
     background-color: var(--secondary-color);
-    background-image: url(/img/fiap-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     color: #FFF;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 5rem 3.125rem;
+}
+
+#hero-banner-principal {
+    background-image: url(/img/fiap-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-banner__title, 
