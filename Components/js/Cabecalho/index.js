@@ -1,7 +1,7 @@
 import { Cabecalho } from "../Cabecalho/cabecalho.js";
 const paginas = [
     {
-        "url": "/src/index.html",
+        "url": "/index.html",
         "nome": "Página Inicial",
         "cabecalho_id": "cabecalho--principal"
     },
