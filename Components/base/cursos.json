@@ -1,0 +1,175 @@
+[
+    {
+        "title": "Adminstração",
+        "desc": "Domine as habilidades essenciais de gestão e liderança para impulsionar o sucesso em diversos setores empresariais.",
+        "text": [
+            "A FIAP tem o melhor curso de Administração de São Paulo, primeiro colocado no ENADE. Isso é consequência de um ambiente de excelência em tecnologia, inovação e empreendedorismo, que desperta nos alunos o pensamento crítico, engajamento social e os prepara para o mercado de trabalho.",
+            "O curso aborda tanto o lado gerencial quanto o lado estratégico de negócios, em disciplinas como: negociação, liderança e trabalho em equipe, direito empresarial, gestão financeira, gestão de pessoas, marketing, processos e gestão de TI.",
+            "Você será capaz de apoiar e conduzir os principais planos de uma empresa em cenários dinâmicos, competitivos e tecnológicos."
+        ],
+        "nav": {
+            "prev": "",
+            "next": "./ads.html"
+        },
+        "url": "./cursos/adm.html",
+        "idPage": "curso-adm"
+    },
+    {
+        "title": "Análise e Desenvolvimento de Sistemas",
+        "desc": "Aprenda a projetar, desenvolver e implementar soluções de software inovadoras para atender às demandas do mercado digital em constante evolução.",
+        "text": [
+            "Você vai aprender a identificar as necessidades estruturais de um sistema, documentar, criar protótipos e desenvolver para web e mobile utilizando os principais softwares, ferramentas e metodologias do mercado, além de ser capaz de gerenciar projetos e controlar a qualidade de programas.",
+            "O curso aborda tanto o lado gerencial quanto o lado estratégico de negócios, em disciplinas como: negociação, liderança e trabalho em equipe, direito empresarial, gestão financeira, gestão de pessoas, marketing, processos e gestão de TI.",   
+            "Você será capaz de apoiar e conduzir os principais planos de uma empresa em cenários dinâmicos, competitivos e tecnológicos."
+        ],
+        "nav": {
+            "prev": "./adm.html",
+            "next": "./banco-de-dados.html"
+        },
+        "url": "./cursos/ads.html",
+        "idPage": "curso-ads"
+    },
+    {
+        "title": "Banco de Dados",
+        "desc": "Torne-se especialista na gestão eficiente e segura de grandes volumes de dados, preparando-se para atuar em projetos de bancos de dados complexos.",
+        "text": [
+            "Tecnologia em Banco de Dados prepara você para entender e utilizar melhor os dados, criando soluções inovadoras a partir de um fluxo de conteúdo monitorado e analisado.",
+            "E personalizando os serviços prestados por meio da construção de bases de dados para tomada de decisão e aplicação dos conceitos de BI (Business Intelligence) relacionados à modelagem de indicadores de desempenho, integração de dados corporativos e visualização das informações.",
+            "Aprenda ou aprofunde seus conhecimentos em aspectos técnicos, de infraestrutura e tuning, para desempenhar papel estratégico nas empresas e dar suporte à área de negócios, garantindo a segurança e integridade das informações das organizações. Tudo isso por meio do uso de tecnologias como Big Data, Cloud Computing e Mobilidade.",
+            "Através do conceito de Big Data, organize as fontes de dados e utilize-as obtendo insights que embasem as corporações para a melhoria da operação do seu negócio."
+        ],
+        "nav": {
+            "prev": "./ads.html",
+            "next": "./engenharia-da-computacao.html"
+        },
+        "url": "./cursos/banco-de-dados.html",
+        "idPage": "curso-bd"
+    },
+    {
+        "title": "Engenharia da Computação",
+        "desc": "Explore o mundo da tecnologia de hardware e software, desenvolvendo habilidades para criar sistemas computacionais avançados e inovadores.",
+        "text": [
+            "O ENGENHEIRO DA COMPUTAÇÃO desenvolve projetos nas áreas de sistemas operacionais, arquitetura de computadores, redes, robótica e inteligência artificial.",
+            "A grade privilegia conhecimentos avançados na área de exatas (física e matemática) e aspectos de eletrônica, controle e automação, telecomunicações e TI.",
+            "Você aprende sobre o ciclo de fabricação (custos, prazos, riscos, qualidade), gerenciamento de equipe, desenvolvimento de aplicativos, linguagens de programação e empreendedorismo.",
+            "Na FIAP, o futuro engenheiro dispõe de um parque tecnológico avançado, laboratórios de química, informática, fabricação e o ‘Maker Labs’, um dos laboratórios mais modernos de engenharia do Brasil, com impressoras 3D, usinagem, cortadoras laser e fresadoras de precisão para criação de protótipos e peças em automação simples e com CNC (Computer Numeric Control)."
+        ],
+        "nav": {
+            "prev": "./banco-de-dados.html",
+            "next": "./engenharia-da-mecatronica.html"
+        },
+        "url": "./cursos/engenharia-da-computacao.html",
+        "idPage": "curso-engComp"
+    },
+    {
+        "title": "Engenharia da Mecatrônica",
+        "desc": "Integre conhecimentos de engenharia mecânica, eletrônica e de controle para projetar e construir sistemas automatizados e robóticos.",
+        "text": [
+            "É uma das profissões mais promissoras do mercado, tanto em época de crise como em momentos positivos da economia.", 
+            "Para ganhar competitividade, toda empresa precisa desenvolver e implantar sistemas automatizados, utilizando tecnologias exponenciais.",
+            "Por isso, a Mecatrônica surge como uma área emergente da Engenharia que ajuda a encontrar soluções originais, integrando Engenharia Elétrica, Engenharia Mecânica, Ciência da Computação, Engenharia de Controle e Tecnologia da Informação.",
+            "Nosso curso proporciona a investigação, concepção e implementação de produtos e processos inteligentes e inéditos dentro da Engenharia.",
+            "Com o objetivo de solucionar problemas reais, você vai criar e realizar um projeto “hands on” por ano, utilizando tecnologias disruptivas como: Inteligência Artificial, Robótica, Sensores, Design, Sistemas Embarcados e Energias Alternativas. Transformando as empresas, aliando empreendedorismo, criatividade e design thinking.", "Este é o Engenheiro Mecatrônico que a FIAP quer formar."
+        ],
+        "nav": {
+            "prev": "./engenharia-da-computacao.html",
+            "next": "./engenharia-da-producao.html"
+        },
+        "url": "./cursos/engenharia-da-mecatronica.html",
+        "idPage": "curso-engMec"
+    },
+    {
+        "title": "Engenharia da Produção",
+        "desc": "Adquira expertise em otimização de processos, gestão de recursos e logística para aumentar a eficiência e a qualidade na produção industrial.",
+        "text": [
+            "O ENGENHEIRO DE PRODUÇÃO reúne conhecimentos das áreas de administração, economia e engenharia. O curso foi planejado para incorporar a influência de ferramentas tecnológic indispensáveis para gestão de negócios.",
+            "A grade privilegia conhecimentos avançados na área de exatas (matemáti ciência e tecnologia) e à formação em aspectos políticos, sociais, ambientais, culturais e de sustentabilidade.",
+            "Na FIAP, o futuro engenheiro dispõe de um parque tecnológico avança laboratórios de química, informática, fabricação e o Maker Labs, onde você pode ir da ideia ao protótipo, uni práticas multidisciplinares de mecânica, eletrônica e tecnologia, com impressoras 3D, usinagem, cortadoras lase fresadoras de precisão."
+        ],
+        "nav": {
+            "prev": "./engenharia-da-mecatronica.html",
+            "next": "./gestao-de-tecnologia-da-informacao.html"
+        },
+        "url": "./cursos/engenharia-da-producao.html",
+        "idPage": "curso-engProd"
+    },
+    {
+        "title": "Gestão de Tecnologia da Informação",
+        "desc": "Desenvolva competências para gerir recursos tecnológicos de forma estratégica, alinhando a TI aos objetivos de negócio da organização.",
+        "text": [
+            "Você vai planejar e gerenciar sistemas computacionais (hardware) e de informação (software) nas áreas de processos, mobilidade, segurança, tecnologias emergentes, sistemas integrados, big data, cloud computing, engenharia de software, marketing digital e redes sociais.",
+            "O curso traz uma abordagem equilibrada entre o conhecimento técnico e de gestão, unindo conhecimento base de plataformas de desenvolvimento com metodologias de projetos.",
+            "A grade foi desenvolvida para que, desde o primeiro ano, os alunos recebam a base necessária para atuarem na área de TI de grandes empresas."
+        ],
+        "nav": {
+            "prev": "./engenharia-da-producao.html",
+            "next": "./jogos-digitais.html"
+        },
+        "url": "./cursos/gestao-de-tecnologia-da-informacao.html",
+        "idPage": "curso-gestTecInf"
+    },
+    {
+        "title": "Jogos Digitais",
+        "desc": "Entre no universo criativo dos jogos digitais, aprendendo a projetar, desenvolver e publicar jogos envolventes para diversas plataformas.",
+        "text": [
+            "Você vai ser preparado para desenvolver jogos em todas as plataformas: internet, consoles (Playstation, Xbox e Nintendo), smartphones (aplicativos para celulares e tablets), desktops (PC e Mac), TV digital, simuladores de realidade virtual e virtualizações (totem tour virtual).",
+            "Você vai aprender a idealizar e desenvolver um jogo desde o enredo, passando pela criação de personagens, conceitos de gameficação, ambientes e objetos de cenários.",
+            "A grade contempla conhecimentos de ilustração, programação, inteligência artificial, modelagem 2D e 3D, design, testes, implantação e gestão.",
+            "Todas as aulas são ministradas em laboratório (inclusive laboratório Apple) com a suíte da Autodesk, utilizada em Hollywood, o Maya, além das ferramentas líderes do mercado como Photoshop e Unity3D.",
+            "Os professores do curso são especialistas de mercado, com experiência acadêmica, atuantes na área e proprietários de empresas que desenvolvem jogos."
+        ],
+        "nav": {
+            "prev": "./gestao-de-tecnologia-da-informacao.html",
+            "next": "./rede-de-computadores.html"
+        },
+        "url": "./cursos/jogos-digitais.html",
+        "idPage": "curso-jogos"
+    },
+    {
+        "title": "Rede de Computadores",
+        "desc": "Aprofunde-se na arquitetura, configuração e segurança de redes de computadores, preparando-se para atuar na administração e manutenção de infraestruturas de rede.",
+        "text": [
+            "É ministrado em um ambiente que simula uma empresa real, com computadores (SO Linux e Windows), roteadores, switches, cabeamento e demais equipamentos, trazendo a vivência que você precisa para ser competitivo no mercado de trabalho.", 
+            "Você vai aprender a dimensionar o uso de equipamentos multiusuários. Configurar acesso e disponibilidade para internet e intranet, roteadores e provedores. Trabalhar com sistemas de gerenciamento de redes, sistemas operacionais e simulação de ambiente de Cloud Computing. E com os novos conhecimentos sobre hardware, software e modos de funcionamento, também vai ser capaz de otimizar o desempenho dos computadores, adequando a estrutura física ao seu potencial de produção, o que aumenta o desempenho. Tudo isso de acordo com as regras de segurança."
+        ],
+        "nav": {
+            "prev": "./jogos-digitais.html",
+            "next": "./sistemas-da-informacao.html"
+        },
+        "url": "./cursos/rede-de-computadores.html",
+        "idPage": "curso-redeComp"
+    },
+    {
+        "title": "Sistemas da Informação",
+        "desc": "Desenvolva habilidades para analisar, projetar e implementar sistemas de informação eficientes, integrando tecnologia e processos de negócio.",
+        "text": [
+            "O BACHAREL EM SISTEMAS DE INFORMAÇÃO recebe uma visão ampla das organizações e seus modelos de negócio e de como a tecnologia pode amplificar sua estratégia.", 
+            "Com conteúdo que vai de hardware a inteligência artificial, passando por gestão empresarial, o curso abrange conhecimentos de desenvolvimento de aplicativos (mobile, games e web), engenharia de software e governança de TI, banco de dados, redes, business intelligence, análise de sistemas orientados a objetos, gestão de SI, gerência de projetos e segurança da informação.", 
+            "A grade foi desenvolvida para que, desde o primeiro ano, os alunos recebam a base necessária para atuarem na área de TI de grandes empresas, resolvendo problemas por meio de raciocínio lógico e buscando solução para os desafios das organizações.", 
+            "Pensar de uma forma digital não é mais uma tendência: é uma estratégia de inovação e de geração de negócios. O acesso à Internet banda larga aumentou 55% em 2015, totalizando 133,7 milhões de acessos, segundo a Telebrasil. Números que ampliam a importância de um tecnólogo não só voltado para a Internet, mas que também domine as novas tecnologias e metodologias que estão surgindo.", 
+            "Neste cenário, a palavra de ordem é: Transformação Digital. Ou ampliar a interação entre cliente e empresa, repensando modelos de negócio com foco na experiência e na continuidade da relação humana, promovendo assim a integração entre os meios físico e digital."
+        ],
+        "nav": {
+            "prev": "./rede-de-computadores.html",
+            "next": "./sistemas-para-internet.html"
+        },
+        "url": "./cursos/sistemas-da-informacao.html",
+        "idPage": "curso-sistInf"
+    },
+    {
+        "title": "Sistemas para Internet",
+        "desc": "Explore as tecnologias web mais recentes, aprendendo a desenvolver aplicações web dinâmicas e interativas para atender às demandas do mercado online.",
+        "text": [
+            "Tecnologia em Sistemas para Internet prepara você para criar experiências omnichannel e desenvolver plataformas tecnológicas que apoiem o processo de transformação digital do mercado.", 
+            "Este é um curso que possibilita a imersão completa em todo o ecossistema digital: desde a criação, manutenção, segurança e gerenciamento de sites, portais e aplicativos mobile até o desenvolvimento de projetos de Marketing Digital e CyberSecurity.", 
+            "No primeiro ano, você já aprende a criar um e-commerce e a atuar como um Web Designer, utilizando os conceitos de UX e Design Thinking. Também vai saber como programar Back-end em Java para acessar uma base de dados Oracle ou MySQL. Já no segundo ano, o foco é no desenvolvimento de sistemas de portais corporativos, portais colaborativos e apps mobile para as plataformas Android e iOS."
+        ],
+        "nav": {
+            "prev": "./sistemas-da-informacao.html",
+            "next": ""
+        },
+        "url": "./cursos/sistemas-para-internet.html",
+        "idPage": "curso-sistNet"
+    }
+
+]

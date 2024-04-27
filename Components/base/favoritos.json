@@ -1,0 +1,77 @@
+[
+    {
+        "integrante": "André Sant'Ana",
+        "sites": [
+            { 
+                "href": "https://openai.com/blog/chatgpt", 
+                "imgSrc": "/src/assets/logos/logo-chatgpt.png", 
+                "imgAlt": "ChatGPT"
+            }, 
+            { 
+                "href": "https://www.bing.com/?cc=br", 
+                "imgSrc": "/src/assets/logos/logo-bing.png", 
+                "imgAlt": "Microsoft Bing"
+            }
+        ]
+    },
+    {
+        "integrante": "Gabriel Eringer",
+        "sites": [
+            { 
+                "href": "https://www.youtube.com", 
+                "imgSrc": "/src/assets/logos/logo-youtube.png", 
+                "imgAlt": "Youtube"
+            }, 
+            { 
+                "href": "https://mimo.org/web/50/overview", 
+                "imgSrc": "/src/assets/logos/logo-mimo.png", 
+                "imgAlt": "Mimo"
+            }
+        ]
+    },
+    {
+        "integrante": "Juan Dutra",
+        "sites": [
+            { 
+                "href": "https://www.fiap.com.br", 
+                "imgSrc": "/src/assets/logos/logo-fiap.png", 
+                "imgAlt": "FIAP"
+            }, 
+            { 
+                "href": "https://www.alura.com.br", 
+                "imgSrc": "/src/assets/logos/logo-alura.png", 
+                "imgAlt": "Alura"
+            }
+        ]
+    },
+    {
+        "integrante": "Yago Farah",
+        "sites": [
+            { 
+                "href": "https://www.techtudo.com.br", 
+                "imgSrc": "/src/assets/logos/logo-techtudo.png", 
+                "imgAlt": "techtudo"
+            }, 
+            { 
+                "href": "https://www.youtube.com", 
+                "imgSrc": "/src/assets/logos/logo-youtube.png", 
+                "imgAlt": "Youtube"
+            }
+        ]
+    },
+    {
+        "integrante": "Eduardo Tatsuo",
+        "sites": [
+            { 
+                "href": "https://jp.mercari.com", 
+                "imgSrc": "/src/assets/logos/logo-mercari.png", 
+                "imgAlt": "mercari"
+            }, 
+            { 
+                "href": "https://www.balenciaga.com/en-en", 
+                "imgSrc": "/src/assets/logos/logo-balenciaga.png", 
+                "imgAlt": "Balenciaga"
+            }
+        ]
+    }
+]

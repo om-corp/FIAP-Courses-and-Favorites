@@ -1,0 +1,15 @@
+{
+  "name": "fiap-courses-and-favorites",
+  "version": "2.0.1",
+  "description": "Checkpoint HTML Fiap Paulista \r Turma 1TDSPG",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "typescript": "tsc --watch",
+    "tailwindcss": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "author": "GEdO23",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

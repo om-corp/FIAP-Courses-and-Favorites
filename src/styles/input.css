@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-primary text-secondary font-sans;
+}
+
+.link {
+    @apply font-bold transition-colors hover:text-tertiary;
+}
+
+.link--pagina-atual {
+    @apply text-tertiary font-bold;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    @apply flex justify-between items-center py-5 px-12 gap-8 flex-wrap bg-accent;
+}
+
+.cabecalho__logo {
+    @apply h-6;
+}
+
+.cabecalho__nav {
+    @apply flex flex-wrap gap-8;
+}
+
+
+/* HERO BANNER */
+.hero-banner {
+    @apply bg-secondary text-accent flex flex-col gap-8 py-20 px-12;
+}
+
+.hero-banner__title, 
+.hero-banner__description {
+    @apply w-2/4 leading-5;
+}
+
+.hero-banner__title {
+    @apply text-4xl font-bold;
+}
+
+.hero-banner__button {
+    @apply bg-tertiary py-4 px-5 rounded w-fit;
+}
+
+#hero-banner-principal {
+    @apply bg-heroBanner bg-center bg-no-repeat bg-cover;
+}
+
+
+/* CARDS */
+.card-section {
+    @apply flex flex-wrap gap-5 py-20 px-12 justify-center;
+}
+
+.card {
+    @apply 
+    flex flex-col gap-12 
+    flex-shrink
+    w-96 p-6 pb-12 rounded-xl bg-accent 
+    transition-opacity opacity-60 hover:opacity-100;
+}
+
+.card__image {
+    @apply aspect-square rounded-xl object-contain p-8;
+}
+
+.card__text-container {
+    @apply flex flex-col gap-1;
+}
+
+.card__title {
+    @apply text-lg font-semibold;
+}
+
+.card__text {
+    @apply text-sm text-[#777];
+}
+
+.card__button {
+    @apply bg-[#3C3C43] font-semibold text-accent p-3 rounded-xl self-baseline text-sm transition-all hover:bg-tertiary;
+}
+
+
+/* CURSOS */
+.cursos {
+    @apply w-4/5 flex flex-col gap-8 p-12 leading-5;
+}
+
+.cursos__title {
+    @apply text-4xl font-bold;
+}
+
+.cursos__text-container {
+    @apply flex flex-col gap-5;
+}
+
+.cursos__nav {
+    @apply flex gap-5;
+}
