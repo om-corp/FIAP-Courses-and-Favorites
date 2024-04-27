@@ -1,24 +1,26 @@
 import { Card } from "./card.js";
 
-const devMode = false;
+const cardSectionID = ".card-section--favorites";
+const url = "../../components/base/favoritos.json";
 
-export function devLog(element: any) {
-    if (devMode) console.log(element);
-};
-
-fetch("../../../Components/base/favoritos.json", {method: "GET"})
+fetch(url, {method: "GET"})
     .then((_response) => _response.json())
     .then((_data) => {
-        const cardSection = document.querySelector(".card-section--favorites");
-        
+        const cardSection = document.querySelector( cardSectionID );
         if (cardSection) {
-            _data.map((data: any, di: number) => {
-                data.sites.map((site: any, si: number) => {
-                    const card = new Card().create(site.imgAlt, data.integrante, { href: site.href, content: "VISITAR PÁGINA" }, { src: site.imgSrc, alt: site.imgAlt })
-                    if (card) cardSection.appendChild( card );
+            _data.map((data: any) => {
+
+                data.sites.map((site: any) => {
+                    const card = new Card().create(
+                        site.imgAlt, data.integrante, 
+                        { href: site.href, content: "VISITAR PÁGINA" }, 
+                        { src: site.imgSrc, alt: site.imgAlt }
+                    );
+                    
+                    if (card) cardSection.appendChild(card);
                 })
             })
         }
-        
     })
     .catch((error) => console.error(error));
+

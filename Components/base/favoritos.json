@@ -4,12 +4,12 @@
         "sites": [
             { 
                 "href": "https://openai.com/blog/chatgpt", 
-                "imgSrc": "/img/chatgpt.png", 
+                "imgSrc": "/src/assets/logos/logo-chatgpt.png", 
                 "imgAlt": "ChatGPT"
             }, 
             { 
                 "href": "https://www.bing.com/?cc=br", 
-                "imgSrc": "/img/bing.png", 
+                "imgSrc": "/src/assets/logos/logo-bing.png", 
                 "imgAlt": "Microsoft Bing"
             }
         ]
@@ -19,12 +19,12 @@
         "sites": [
             { 
                 "href": "https://www.youtube.com", 
-                "imgSrc": "/img/youtube.png", 
+                "imgSrc": "/src/assets/logos/logo-youtube.png", 
                 "imgAlt": "Youtube"
             }, 
             { 
                 "href": "https://mimo.org/web/50/overview", 
-                "imgSrc": "/img/mimo.png", 
+                "imgSrc": "/src/assets/logos/logo-mimo.png", 
                 "imgAlt": "Mimo"
             }
         ]
@@ -34,12 +34,12 @@
         "sites": [
             { 
                 "href": "https://www.fiap.com.br", 
-                "imgSrc": "/img/fiap.png", 
+                "imgSrc": "/src/assets/logos/logo-fiap.png", 
                 "imgAlt": "FIAP"
             }, 
             { 
                 "href": "https://www.alura.com.br", 
-                "imgSrc": "/img/alura.png", 
+                "imgSrc": "/src/assets/logos/logo-alura.png", 
                 "imgAlt": "Alura"
             }
         ]
@@ -49,12 +49,12 @@
         "sites": [
             { 
                 "href": "https://www.techtudo.com.br", 
-                "imgSrc": "/img/techtudo.png", 
+                "imgSrc": "/src/assets/logos/logo-techtudo.png", 
                 "imgAlt": "techtudo"
             }, 
             { 
                 "href": "https://www.youtube.com", 
-                "imgSrc": "/img/youtube.png", 
+                "imgSrc": "/src/assets/logos/logo-youtube.png", 
                 "imgAlt": "Youtube"
             }
         ]
@@ -64,12 +64,12 @@
         "sites": [
             { 
                 "href": "https://jp.mercari.com", 
-                "imgSrc": "/img/mercari.png", 
+                "imgSrc": "/src/assets/logos/logo-mercari.png", 
                 "imgAlt": "mercari"
             }, 
             { 
                 "href": "https://www.balenciaga.com/en-en", 
-                "imgSrc": "/img/balenciaga.png", 
+                "imgSrc": "/src/assets/logos/logo-balenciaga.png", 
                 "imgAlt": "Balenciaga"
             }
         ]

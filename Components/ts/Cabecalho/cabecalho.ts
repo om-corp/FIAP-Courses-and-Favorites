@@ -1,4 +1,4 @@
-import { Container, Anchor, Image, IImage, IAnchor, AbstractComponent } from "../components.js";
+import { Container, Anchor, Image, IAnchor, AbstractComponent } from "../components.js";
 
 const styles = {
     "LOGO": "cabecalho__logo",
@@ -14,9 +14,9 @@ export class Cabecalho extends AbstractComponent {
     create(_header: HTMLElement, _currentPage: string, _links: IAnchor[]): HTMLElement | null {
         try {
             if (_header) {
-                this.devLogComponent( "CABEÇALHO", "create", {_header, _currentPage, _links});
+                this.devLogComponent("CABEÇALHO", "create", {_header, _currentPage, _links});
                 
-                const logo = new Image().create({ src: "/img/fiap.png", alt: "FIAP", className: styles.LOGO });
+                const logo = new Image().create({ src: "/public/fiap.png", alt: "FIAP", className: styles.LOGO });
                 
                 _links.map(link => this.devLog(link))
                 const nav = new Container().create({ tag: "nav", elements: [

@@ -12,10 +12,6 @@
             "next": "./ads.html"
         },
         "url": "./cursos/adm.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-adm"
     },
     {
@@ -31,10 +27,6 @@
             "next": "./banco-de-dados.html"
         },
         "url": "./cursos/ads.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-ads"
     },
     {
@@ -51,10 +43,6 @@
             "next": "./engenharia-da-computacao.html"
         },
         "url": "./cursos/banco-de-dados.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-bd"
     },
     {
@@ -71,10 +59,6 @@
             "next": "./engenharia-da-mecatronica.html"
         },
         "url": "./cursos/engenharia-da-computacao.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-engComp"
     },
     {
@@ -92,10 +76,6 @@
             "next": "./engenharia-da-producao.html"
         },
         "url": "./cursos/engenharia-da-mecatronica.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-engMec"
     },
     {
@@ -111,10 +91,6 @@
             "next": "./gestao-de-tecnologia-da-informacao.html"
         },
         "url": "./cursos/engenharia-da-producao.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-engProd"
     },
     {
@@ -130,10 +106,6 @@
             "next": "./jogos-digitais.html"
         },
         "url": "./cursos/gestao-de-tecnologia-da-informacao.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-gestTecInf"
     },
     {
@@ -151,10 +123,6 @@
             "next": "./rede-de-computadores.html"
         },
         "url": "./cursos/jogos-digitais.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-jogos"
     },
     {
@@ -169,10 +137,6 @@
             "next": "./sistemas-da-informacao.html"
         },
         "url": "./cursos/rede-de-computadores.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-redeComp"
     },
     {
@@ -190,10 +154,6 @@
             "next": "./sistemas-para-internet.html"
         },
         "url": "./cursos/sistemas-da-informacao.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-sistInf"
     },
     {
@@ -209,10 +169,6 @@
             "next": ""
         },
         "url": "./cursos/sistemas-para-internet.html",
-        "img": {
-            "src": "/img/fiap.png",
-            "alt": "FIAP"
-        },
         "idPage": "curso-sistNet"
     }
 

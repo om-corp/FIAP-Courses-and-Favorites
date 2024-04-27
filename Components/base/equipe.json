@@ -2,31 +2,31 @@
     {
         "nome": "André Sant'Ana",
         "rm": "551575",
-        "avatar": "/img/foto-integrante-andre.jpeg",
+        "avatar": "/src/assets/fotos/foto-andre.jpeg",
         "github": "https://github.com/andresant-ana"
     },
     {
         "nome": "Gabriel Eringer",
         "rm": "99632",
-        "avatar": "/img/foto-integrante-gabriel.jpeg",
+        "avatar": "/src/assets/fotos/foto-gabriel.jpeg",
         "github": "https://github.com/GEdO23"
     },
     {
         "nome": "Yago Marques",
         "rm": "551616",
-        "avatar": "/img/foto-integrante-yago.jpeg",
+        "avatar": "/src/assets/fotos/foto-yago.jpeg",
         "github": "https://github.com/YagoFarah"
     },
     {
         "nome": "Juan Dutra",
         "rm": "98719",
-        "avatar": "/img/foto-integrante-juan.png",
+        "avatar": "/src/assets/fotos/foto-juan.png",
         "github": "https://github.com/Juandutr"
     },
     {
         "nome": "Eduardo Tatsuo",
         "rm": "551428",
-        "avatar": "/img/foto-integrante-tatsuo.png",
+        "avatar": "/src/assets/fotos/foto-tatsuo.png",
         "github": "https://github.com/tatsuoyohji"
     }
 ]

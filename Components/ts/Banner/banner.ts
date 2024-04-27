@@ -1,4 +1,4 @@
-import { AbstractComponent, Anchor, IAnchor, IImage, Text } from "../components.js";
+import { AbstractComponent, Anchor, IAnchor, Text } from "../components.js";
 
 const styles = {
     "TITLE": "hero-banner__title",

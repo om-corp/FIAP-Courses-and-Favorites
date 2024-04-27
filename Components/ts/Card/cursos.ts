@@ -1,12 +1,21 @@
 import { Card } from "./card.js";
 
-fetch("../../../Components/base/cursos.json", {method: "GET"})
+const cardSectionID = ".card-section--cursos";
+const url = "../../components/base/cursos.json";
+
+fetch(url, {method: "GET"})
     .then((_response) => _response.json())
     .then((_data) => {
-        const cardSection = document.querySelector(".card-section--cursos");
+        const cardSection = document.querySelector( cardSectionID );
         if (cardSection) {
             _data.map((data: any) => {
-                const card = new Card().create(data.title, data.desc, { href: data.url, content: "ACESSAR" }, { src: data.img.src, alt: data.img.alt });
+
+                const card = new Card().create(
+                    data.title, data.desc, 
+                    { href: data.url, content: "ACESSAR" }, 
+                    { src: "../assets/logos/logo-fiap.png", alt: "FIAP" }
+                );
+
                 if (card) cardSection.appendChild(card);
             })
         }

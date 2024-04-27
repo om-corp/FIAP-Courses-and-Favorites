@@ -3,10 +3,9 @@ import { Container, Anchor, Image, Text, AbstractComponent, IAnchor, IImage } fr
 const styles = {
     "CARD": "card",
     "IMAGE": "card__image",
-    "TEXT_CONTAINER": "card__text",
-    "TITLE": "card__headline",
-    "TEXT": "card__content",
-    "FOOTER": "card__footer",
+    "TEXT_CONTAINER": "card__text-container",
+    "TITLE": "card__title",
+    "TEXT": "card__text",
     "BUTTON": "card__button"
 }
 
@@ -23,9 +22,7 @@ export class Card extends AbstractComponent implements ICard {
                     new Text().create({ content: _title, tag: "h3", className: styles.TITLE }),
                     new Text().create({ content: _desc, tag: "p", className: styles.TEXT })
                 ], className: styles.TEXT_CONTAINER }),
-                new Container().create({ tag: "footer", elements: [
-                    new Anchor().create({ href: _button.href, content: _button.content, className: styles.BUTTON })
-                ], className: styles.FOOTER})
+                new Anchor().create({ href: _button.href, content: _button.content, className: styles.BUTTON })
             ], className: styles.CARD })
 
             this.devLogComponent("CARD", "create", card);

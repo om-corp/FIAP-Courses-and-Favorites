@@ -1,10 +1,4 @@
 import { Container, Anchor, Text, AbstractComponent } from "../components.js";
-const devMode = true;
-export function devLog(element) {
-    if (devMode)
-        console.log(element);
-}
-;
 export class Curso extends AbstractComponent {
     constructor() {
         super(...arguments);

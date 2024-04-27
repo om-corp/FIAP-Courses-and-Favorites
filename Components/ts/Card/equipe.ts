@@ -1,22 +1,23 @@
 import { Card } from "./card.js";
 
-const devMode = false;
+const cardSectionID = ".card-section--equipe";
+const url = "../../components/base/equipe.json";
 
-export function devLog(element: any) {
-    if (devMode) console.log(element);
-};
-
-fetch("../../../Components/base/integrantes.json", {method: "GET"})
+fetch(url, {method: "GET"})
     .then((_response) => _response.json())
     .then((_data) => {
-        const cardSection = document.querySelector(".card-section--equipe");
-        
+        const cardSection = document.querySelector( cardSectionID );
         if (cardSection) {
-            _data.map((data: any, di: number) => {
-                const card = new Card().create(data.nome, `RM ${data.rm}`, { href: data.github, content: "VISITAR GITHUB" }, {src: data.avatar, alt: `Avatar de ${data.nome}`, rounded: "100%" })
-                if (card) cardSection.appendChild( card );
+            _data.map((data: any) => {
+
+                const card = new Card().create(
+                    data.nome, `RM ${data.rm}`, 
+                    { href: data.github, content: "VISITAR GITHUB" }, 
+                    { src: data.avatar, alt: `Avatar de ${data.nome}`, rounded: "100%" }
+                );
+                
+                if (card) cardSection.appendChild(card);
             })
         }
-        
     })
     .catch((error) => console.error(error));
