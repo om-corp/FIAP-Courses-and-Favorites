@@ -10,7 +10,7 @@ module.exports = {
             accent: `#f3f3f3`
         },
         backgroundImage: {
-            heroBanner: "url('/public/background-fiap.png')"
+            heroBanner: "url('../../public/background-fiap.png')"
         }
     },
     plugins: [],
