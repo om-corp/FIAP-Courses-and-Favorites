@@ -1,7 +1,7 @@
 import { Card } from "./card.js";
 
 const cardSectionID = ".card-section--favorites";
-const url = "../../components/base/favoritos.json";
+const url = "/Components/base/favoritos.json";
 
 fetch(url, {method: "GET"})
     .then((_response) => _response.json())

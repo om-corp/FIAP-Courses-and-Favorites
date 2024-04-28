@@ -7,17 +7,17 @@ const paginas = [
         "cabecalho_id": "cabecalho--principal"
     },
     {
-        "url": "/src/pages/cursos.html",
+        "url": "/cursos.html",
         "nome": "Cursos",
         "cabecalho_id": "cabecalho--cursos"
     },
     {
-        "url": "/src/pages/favoritos.html",
+        "url": "/favoritos.html",
         "nome": "Favoritos",
         "cabecalho_id": "cabecalho--favoritos"
     },
     {
-        "url": "/src/pages/equipe.html",
+        "url": "/equipe.html",
         "nome": "Equipe",
         "cabecalho_id": "cabecalho--equipe"
     }
