@@ -14,7 +14,7 @@ export class Cabecalho extends AbstractComponent {
         try {
             if (_header) {
                 this.devLogComponent("CABEÇALHO", "create", { _header, _currentPage, _links });
-                const logo = new Image().create({ src: "/public/fiap.png", alt: "FIAP", className: styles.LOGO });
+                const logo = new Image().create({ src: "/Assets/logos/logo-fiap.png", alt: "FIAP", className: styles.LOGO });
                 _links.map(link => this.devLog(link));
                 const nav = new Container().create({ tag: "nav", elements: [
                         new Container().create({ tag: "ul", elements: _links.map((link) => {

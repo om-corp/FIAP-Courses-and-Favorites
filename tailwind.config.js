@@ -10,7 +10,8 @@ module.exports = {
             accent: `#f3f3f3`
         },
         backgroundImage: {
-            heroBanner: "url('../../public/background-fiap.png')"
+            // Se localiza dentro de input.css, ao alterar, favor atualizar output.css
+            heroBanner: "url('../Assets/background-fiap.png')"
         }
     },
     plugins: [],

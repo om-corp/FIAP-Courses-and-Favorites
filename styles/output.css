@@ -647,7 +647,7 @@ body {
 }
 
 #hero-banner-principal {
-  background-image: url('../../public/background-fiap.png');
+  background-image: url('../Assets/background-fiap.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

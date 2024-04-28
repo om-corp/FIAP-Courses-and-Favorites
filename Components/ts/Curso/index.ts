@@ -1,6 +1,6 @@
 import { Curso } from "./curso.js";
 
-const url = "../../../components/base/cursos.json";
+const url = "/Components/base/cursos.json";
 
 fetch(url, {method: "GET"})
     .then((_response) => _response.json())

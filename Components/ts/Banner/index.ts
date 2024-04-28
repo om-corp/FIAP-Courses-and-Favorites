@@ -4,7 +4,7 @@ const info = {
     "title": "Desbrave o Futuro com Nossos Cursos de Tecnologia",
     "desc": "Prepare-se para uma carreira de sucesso com os cursos inovadores da nossa faculdade de tecnologia. Explore as últimas tendências, domine habilidades essenciais e conquiste o mercado de trabalho. Seja parte da revolução digital!",
     "button": {
-        "href": "./src/pages/cursos.html",
+        "href": "/cursos.html",
         "content": "Explore Nossos Cursos"
     }
 }
